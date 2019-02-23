@@ -9,7 +9,6 @@ class Logger(object):
     def __init__(self):
         self.logbook = {}
         self.logbook['steps'] = []
-        self.currentTurn = []
 
 
     def log(self, name, type, data):
@@ -25,17 +24,7 @@ class Logger(object):
         state['data'] = data
         state['index'] = list_index(name)
 
-        self.currentTurn.append(state)
-
-
-    def next_turn(self):
-        '''
-        Increments the turn to the next time interval
-        '''
-        turn_dict = {}
-        turn_dict['objects'] = self.currentTurn
-        self.logbook['steps'].append(turn_dict)
-        self.currentTurn = []
+        self.logbook['steps'].append(state)
 
 
     def to_json(self, output):
@@ -43,8 +32,6 @@ class Logger(object):
         Outputs logbook to a json file.
         @param output: file to output json to
         '''
-        if len(self.currentTurn) != 0:
-            next_turn()
         with open(output, 'w') as outfile:
             json.dump(self.logbook, outfile, indent=4)
 
@@ -66,7 +53,8 @@ def test_logger(output_file):
     logger = Logger()
     logger.log('var_a', 'list', '[a,b,c,d,e]')
     logger.log('var_b', 'int', '23')
-    logger.next_turn()
     logger.log('var_b', 'stack', '[a,b,e,f,g]')
 
     logger.to_json(output_file)
+
+test_logger('test.json')
