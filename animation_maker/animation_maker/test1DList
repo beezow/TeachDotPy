@@ -1,0 +1,74 @@
+{
+    "steps": [
+        {
+            "name": "c",
+            "type": "<class 'list'>",
+            "data": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "index": []
+        },
+        {
+            "name": "c[i]",
+            "type": "<class 'int'>",
+            "data": 0,
+            "index": [
+                "i"
+            ]
+        },
+        {
+            "name": "c[i]",
+            "type": "<class 'int'>",
+            "data": 1,
+            "index": [
+                "i"
+            ]
+        },
+        {
+            "name": "c[i]",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": [
+                "i"
+            ]
+        },
+        {
+            "name": "c[i]",
+            "type": "<class 'int'>",
+            "data": 3,
+            "index": [
+                "i"
+            ]
+        },
+        {
+            "name": "c[i]",
+            "type": "<class 'int'>",
+            "data": 4,
+            "index": [
+                "i"
+            ]
+        },
+        {
+            "name": "c[i]",
+            "type": "<class 'int'>",
+            "data": 5,
+            "index": [
+                "i"
+            ]
+        },
+        {
+            "name": "c[i]",
+            "type": "<class 'int'>",
+            "data": 6,
+            "index": [
+                "i"
+            ]
+        }
+    ]
+}
