@@ -1,27 +1,19 @@
 {
     "steps": [
         {
-            "objects": [
-                {
-                    "name": "var_a",
-                    "type": "list",
-                    "data": "[a,b,c,d,e]"
-                },
-                {
-                    "name": "var_b",
-                    "type": "int",
-                    "data": "23"
-                }
-            ]
+            "name": "var_a",
+            "type": "list",
+            "data": "[a,b,c,d,e]"
         },
         {
-            "objects": [
-                {
-                    "name": "var_b",
-                    "type": "stack",
-                    "data": "[a,b,e,f,g]"
-                }
-            ]
+            "name": "var_b",
+            "type": "int",
+            "data": "23"
+        },
+        {
+            "name": "var_b",
+            "type": "stack",
+            "data": "[a,b,e,f,g]"
         }
     ]
 }
