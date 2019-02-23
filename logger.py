@@ -21,7 +21,11 @@ class Logger(object):
         state = {}
         state['name'] = name
         state['type'] = type
-        state['data'] = data
+        try:
+            state['data'] = data.copy()
+        except:
+            state['data'] = data
+
         state['index'] = self.list_index(name)
 
         self.logbook['steps'].append(state)
@@ -57,5 +61,5 @@ def test_logger(output_file):
     logger.log('var_b', 'stack', '[a,b,e,f,g]')
 
     logger.to_json(output_file)
-
-test_logger('test_json/test_json_log.txt')
+if __name__ == "__main__":
+    test_logger('test_json/test_json_log.txt')
