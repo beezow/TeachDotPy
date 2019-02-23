@@ -1,0 +1,14 @@
+{
+    "steps": [
+        {
+            "name": "a",
+            "type": "<class 'int'>",
+            "data": 1
+        },
+        {
+            "name": "b",
+            "type": "<class 'int'>",
+            "data": 3
+        }
+    ]
+}
