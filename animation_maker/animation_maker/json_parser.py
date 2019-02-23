@@ -29,12 +29,12 @@ class List:
         self.data = data
         self.index = index
 
-def list_of_objects():
-    with open('test1DList.json') as json_file:
+def list_of_objects(file_name):
+    with open(file_name) as json_file:
         data = json.load(json_file)
         objects = []
         for p in data["steps"]:
-            if p["type"] == "<class 'queue'>":
+            if p["type"] == "<collections.deque>":
                 objects.append(Queue(p["name"], p["type"], p["data"], p["index"]))
             if p["type"] == "<class 'list'>":
                 objects.append(List(p["name"], p["type"], p["data"], p["index"]))
@@ -44,4 +44,4 @@ def list_of_objects():
                 objects.append(String(p["name"], p["type"], p["data"], p["index"]))
         return objects
 
-list_of_objects()
+list_of_objects("test1DList.json")
