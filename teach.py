@@ -1,17 +1,20 @@
 import argparse
-
+from translate import * 
+from logger import Logger
 class File:
-    def __init__(self, filename):
+    def __init__(self, inname, outname):
         self.translated = ""
-        self.load_file(filename)
-
+        self.load_file(inname)
+        self.logger = Logger()
+        self.outname = outname
  
     def run(self):
         '''
         runs translated file
         '''
-        #print(self.translated)
+#        print(self.translated)
         exec(self.translated)
+        self.logger.to_json(self.outname)
 
     def load_file(self, filename):
         '''
@@ -21,11 +24,14 @@ class File:
 
         with open(filename, "r") as file:
             for line in file:
+                if len(line.strip()) == 0: continue
                 new_line, l_space = File.strip_spaces(line)
                 new_line = new_line.strip() 
-                new_line = File.translate(new_line)
-                new_line = File.add_spaces(new_line, l_space)
-                self.translated += new_line + ";\n"
+                trans_lines = translate(new_line)
+                if not trans_lines: continue
+                for trans in trans_lines:
+                    trans = File.add_spaces(trans, l_space)
+                    self.translated += trans + ";\n"
     
     @staticmethod
     def strip_spaces(line):
@@ -47,16 +53,11 @@ class File:
         spaces = " " * l_spaces
         return spaces + line
     
-    @staticmethod
-    def translate(line):
-        '''
-        skeleton
-        '''
-        return line
 
 parser = argparse.ArgumentParser(description='Animates python code.')
-parser.add_argument('filename', type=str, help='the file to animate')
+parser.add_argument('infile', type=str, help='the file to animate')
+parser.add_argument('logfile', type=str, help='the file to save the animation json info')
 args = parser.parse_args()
 
-file = File(args.filename)
+file = File(args.infile, args.logfile)
 file.run()
