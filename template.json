@@ -1,0 +1,14 @@
+{
+  "steps": [
+    {
+      "objects": [
+        {
+          "name": "list_one",
+          "type": "list",
+		      "data": "[1, 2, 3, 4, 5]",
+          "index": []
+		    }
+	    ]
+	  }
+  ]
+}
