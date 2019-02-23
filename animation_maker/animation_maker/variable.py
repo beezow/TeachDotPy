@@ -13,7 +13,7 @@ class Variable(object):
         fill(0)
         text(str(self.data), self.x + TEXTSIZE, self.y + TEXTSIZE)
         textSize(18)
-        #text(self.name, self.x, self.y + self.size + TEXTSIZE)
+        text(self.name, self.x, self.y + self.size + TEXTSIZE)
 
     def update_data(self, data):
         self.data = data
