@@ -5,15 +5,15 @@ class Variable(object):
         self.x = x
         self.y = y
         self.size = size
-        
+
     def draw(self, color):
         TEXTSIZE = 18
         fill(color)
         rect(self.x, self.y, self.size, self.size)
         fill(0)
-        #text(str(self.data), self.x self.y + TEXTSIZE / 2)
+        text(str(self.data), self.x + TEXTSIZE, self.y + TEXTSIZE)
         textSize(18)
-        text(self.name, self.x, self.y + self.size + TEXTSIZE)
-    
+        #text(self.name, self.x, self.y + self.size + TEXTSIZE)
+
     def update_data(self, data):
         self.data = data
