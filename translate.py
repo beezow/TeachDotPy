@@ -1,5 +1,11 @@
 #Method file for translating native python code
 import re
+from logger import Logger
+
+
+def variable(self, variable, name):
+    Logger.log(name, str(type(variable)), variable)
+
 
 def translate(line):
     '''
