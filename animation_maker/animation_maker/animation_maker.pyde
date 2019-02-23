@@ -3,6 +3,7 @@ import copy
 from variable import *
 from frame import *
 from visual_list import *
+from json_parser import *
 
 var = None
 slides = []
@@ -17,6 +18,11 @@ def setup():
     object_tracker.append(var)
     newFrame = Frame(copy.deepcopy(object_tracker))
     slides.append(newFrame)
+    
+    another_list = list_of_objects("test1DList.json")
+    for p in another_list:
+        object_tracker.append(p)
+        slides.append(Frame(copy.deepcopy(object_tracker)))
 
     var2 = Variable('j', '2', 360, 360)
     object_tracker.append(var2)

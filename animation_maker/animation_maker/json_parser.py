@@ -1,5 +1,7 @@
 import json
 import ast
+from visual_list import *
+from variable import *
 
 class Queue:
     def __init__(self, name, type, data, index):
@@ -37,9 +39,9 @@ def list_of_objects(file_name):
             if p["type"] == "<collections.deque>":
                 objects.append(Queue(p["name"], p["type"], p["data"], p["index"]))
             if p["type"] == "<class 'list'>":
-                objects.append(List(p["name"], p["type"], p["data"], p["index"]))
+                objects.append(Visual_List(p["name"], p["data"], 0, 0))
             if p["type"] == "<class 'int'>":
-                objects.append(Int(p["name"], p["type"], p["data"], p["index"]))
+                objects.append(Variable(p["name"], p["data"], 0, 0))
             if p["type"] == "<class 'string'>":
-                objects.append(String(p["name"], p["type"], p["data"], p["index"]))
+                objects.append(Variable(p["name"], p["data"], 0, 0))
         return objects
