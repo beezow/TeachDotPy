@@ -14,7 +14,7 @@ def translate(line):
     '''
 
 
-    if re.compile('+=').search(line):
+    if re.compile('[+\-*/]=').search(line):
         line = remove_plus_eq(line)
     if re.compile('=').search(line):
         return replace_assign(line)
@@ -23,7 +23,7 @@ def translate(line):
     #Other stuff
 
 def remove_plus_eq(line):
-    vars = line.split("[+-*/]=")
+    vars = re.split("[+\-*/]=", line)
     op_index = len(vars[0])
     new_line = vars[0] + "=" + vars[0] + line[op_index] + vars[1]
     return new_line
