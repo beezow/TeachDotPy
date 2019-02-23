@@ -43,5 +43,3 @@ def list_of_objects(file_name):
             if p["type"] == "<class 'string'>":
                 objects.append(String(p["name"], p["type"], p["data"], p["index"]))
         return objects
-
-list_of_objects("test1DList.json")
