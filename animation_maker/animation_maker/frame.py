@@ -4,4 +4,4 @@ class Frame(object):
         
     def draw(self):
         for object in self.objects:
-            object.draw(color(255, 255, 255))
+            object.draw()
