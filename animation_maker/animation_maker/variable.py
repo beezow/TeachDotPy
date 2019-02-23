@@ -23,3 +23,16 @@ class Variable(object):
 
     def update_data(self, data):
         self.data = data
+    
+    def re_highlight(self):
+        self.highlight = True
+        self.tint = color(0, 0, 255)
+    def de_highlight(self):
+        self.tint = color(255, 255, 255)
+
+    def print_poly(self):
+        self.poly.setFill(self.tint)
+        self.block = shape(self.poly, self.posx, self.posy)
+        textAlign(CENTER)
+        textFont(createFont("Arial", self.sizey / 2, True))
+        text(self.value, self.posx + int(self.sizex / 2), self.posy + int(self.sizey / 1.5))
