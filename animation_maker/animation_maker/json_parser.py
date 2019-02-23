@@ -1,7 +1,7 @@
 import json
 import ast
 
-class Stack:
+class Queue:
     def __init__(self, name, type, data, index):
         self.name = name
         self.type = type
@@ -34,14 +34,14 @@ def list_of_objects():
         data = json.load(json_file)
         objects = []
         for p in data["steps"]:
-            if p["type"] == "<class 'stack'>":
-                objects.append(Stack(p["name"], p["type"], p["data"], p["index"]))
+            if p["type"] == "<class 'queue'>":
+                objects.append(Queue(p["name"], p["type"], p["data"], p["index"]))
             if p["type"] == "<class 'list'>":
                 objects.append(List(p["name"], p["type"], p["data"], p["index"]))
             if p["type"] == "<class 'int'>":
                 objects.append(Int(p["name"], p["type"], p["data"], p["index"]))
             if p["type"] == "<class 'string'>":
-                objects.append(Int(p["name"], p["type"], p["data"], p["index"]))
+                objects.append(String(p["name"], p["type"], p["data"], p["index"]))
         return objects
 
 list_of_objects()
