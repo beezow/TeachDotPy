@@ -1,6 +1,9 @@
+#!/usr/bin/python3
+
 import argparse
 from translate import * 
 from logger import Logger
+
 class File:
     def __init__(self, inname, outname):
         self.translated = ""
@@ -31,7 +34,7 @@ class File:
                 if not trans_lines: continue
                 for trans in trans_lines:
                     trans = File.add_spaces(trans, l_space)
-                    self.translated += trans + ";\n"
+                    self.translated += trans + "\n"
     
     @staticmethod
     def strip_spaces(line):

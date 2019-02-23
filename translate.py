@@ -3,7 +3,7 @@ import re
 from logger import Logger
 
 
-def variable(self, variable, name):
+def variable(name, variable):
     Logger.log(name, str(type(variable)), variable)
 
 
@@ -12,11 +12,21 @@ def translate(line):
     Translate all lines of code to be able to be logged
     @param line: string representing a line of code
     '''
+
+
+    if re.compile('+=').search(line):
+        line = remove_plus_eq(line)
     if re.compile('=').search(line):
         return replace_assign(line)
 
+    return [line]
     #Other stuff
 
+def remove_plus_eq(line):
+    vars = line.split("[+-*/]=")
+    op_index = len(vars[0])
+    new_line = vars[0] + "=" + vars[0] + line[op_index] + vars[1]
+    return new_line
 
 def replace_assign(line):
     '''
@@ -34,8 +44,8 @@ def replace_assign(line):
     for i in range(len(left_obj)):
         left_obj[i] = left_obj[i].strip()
         right_obj[i] = right_obj[i].strip()
-        assignment_li.append(left_obj[i] + " = "
-                + "variable(" + left_obj[i] + "," + right_obj[i] + ")")
+        assignment_li.append(line + "; self.logger.log(\"" + left_obj[i] + "\"" + ", str(type(" +
+                left_obj[i] + ")), " + left_obj[i] + ")")
 
     return assignment_li
 
@@ -45,4 +55,5 @@ def test_translate():
     print(translate("p, q, r ,k,c= 1, 2, 'c', arg, getFunc()"))
     print(translate(" b = a + 1"))
 
-test_translate()
+if __name__ == "__main__":
+    test_translate()
