@@ -1,0 +1,22 @@
+{
+    "steps": [
+        {
+            "name": "var_a",
+            "type": "list",
+            "data": "[a,b,c,d,e]",
+            "index": []
+        },
+        {
+            "name": "var_b",
+            "type": "int",
+            "data": "23",
+            "index": []
+        },
+        {
+            "name": "var_b",
+            "type": "stack",
+            "data": "[a,b,e,f,g]",
+            "index": []
+        }
+    ]
+}

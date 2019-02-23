@@ -22,7 +22,7 @@ class Logger(object):
         state['name'] = name
         state['type'] = type
         state['data'] = data
-        state['index'] = list_index(name)
+        state['index'] = self.list_index(name)
 
         self.logbook['steps'].append(state)
 
@@ -36,14 +36,15 @@ class Logger(object):
             json.dump(self.logbook, outfile, indent=4)
 
 
-    def list_index(var_name):
+    def list_index(self, var_name):
         '''
         Outputs the index from referencing list, if var_name is a list
         '''
-        indices = re.findall("\[[^\[\]]\]", "a[1]")
+        indices = re.findall("\[[^\[\]]\]", var_name)
         for i in range(len(indices)):
             indices[i] = re.sub("[\[\]]", "", indices[i])
         return indices
+
 
     def __str__(self):
         return str(self.logbook)
@@ -57,4 +58,4 @@ def test_logger(output_file):
 
     logger.to_json(output_file)
 
-test_logger('test.json')
+test_logger('test_json/test_json_log.txt')
