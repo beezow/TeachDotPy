@@ -1,4 +1,5 @@
 import json
+import re
 
 class Logger(object):
     '''
@@ -10,6 +11,7 @@ class Logger(object):
         self.logbook['steps'] = []
         self.currentTurn = []
 
+
     def log(self, name, type, data):
         '''
         Takes in a turn and adds that to the currentTurn list.
@@ -19,10 +21,12 @@ class Logger(object):
         '''
         state = {}
         state['name'] = name
-        state['type'] = type 
+        state['type'] = type
         state['data'] = data
+        state['index'] = list_index(name)
 
         self.currentTurn.append(state)
+
 
     def next_turn(self):
         '''
@@ -32,6 +36,7 @@ class Logger(object):
         turn_dict['objects'] = self.currentTurn
         self.logbook['steps'].append(turn_dict)
         self.currentTurn = []
+
 
     def to_json(self, output):
         '''
@@ -43,9 +48,19 @@ class Logger(object):
         with open(output, 'w') as outfile:
             json.dump(self.logbook, outfile, indent=4)
 
+
+    def list_index(var_name):
+        '''
+        Outputs the index from referencing list, if var_name is a list
+        '''
+        indices = re.findall("\[[^\[\]]\]", "a[1]")
+        for i in range(len(indices)):
+            indices[i] = re.sub("[\[\]]", "", indices[i])
+        return indices
+
     def __str__(self):
         return str(self.logbook)
-    
+
 
 def test_logger(output_file):
     logger = Logger()
@@ -55,4 +70,3 @@ def test_logger(output_file):
     logger.log('var_b', 'stack', '[a,b,e,f,g]')
 
     logger.to_json(output_file)
-
