@@ -1,4 +1,5 @@
 import json
+import re
 
 class Logger(object):
     '''
@@ -8,7 +9,7 @@ class Logger(object):
     def __init__(self):
         self.logbook = {}
         self.logbook['steps'] = []
-        self.currentTurn = []
+
 
     def log(self, name, type, data):
         '''
@@ -19,40 +20,46 @@ class Logger(object):
         '''
         state = {}
         state['name'] = name
-        state['type'] = type 
-        state['data'] = data
+        state['type'] = type
+        try:
+            state['data'] = data.copy()
+        except:
+            state['data'] = data
 
-        self.currentTurn.append(state)
+        state['index'] = self.list_index(name)
 
-    def next_turn(self):
-        '''
-        Increments the turn to the next time interval
-        '''
-        turn_dict = {}
-        turn_dict['objects'] = self.currentTurn
-        self.logbook['steps'].append(turn_dict)
-        self.currentTurn = []
+        self.logbook['steps'].append(state)
+
 
     def to_json(self, output):
         '''
         Outputs logbook to a json file.
         @param output: file to output json to
         '''
-        if len(self.currentTurn) != 0:
-            next_turn()
         with open(output, 'w') as outfile:
             json.dump(self.logbook, outfile, indent=4)
 
+
+    def list_index(self, var_name):
+        '''
+        Outputs the index from referencing list, if var_name is a list
+        '''
+        indices = re.findall("\[[^\[\]]\]", var_name)
+        for i in range(len(indices)):
+            indices[i] = re.sub("[\[\]]", "", indices[i])
+        return indices
+
+
     def __str__(self):
         return str(self.logbook)
-    
+
 
 def test_logger(output_file):
     logger = Logger()
     logger.log('var_a', 'list', '[a,b,c,d,e]')
     logger.log('var_b', 'int', '23')
-    logger.next_turn()
     logger.log('var_b', 'stack', '[a,b,e,f,g]')
 
     logger.to_json(output_file)
-
+if __name__ == "__main__":
+    test_logger('test_json/test_json_log.txt')
