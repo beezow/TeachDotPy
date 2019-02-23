@@ -47,13 +47,12 @@ class Logger(object):
         return str(self.logbook)
     
 
-#logger = Logger()
-#logger.log('var_a', 'list', '[a,b,c,d,e]')
-#logger.log('var_b', 'int', '23')
-#logger.next_turn()
-#logger.log('var_b', 'stack', '[a,b,e,f,g]')
-#logger.next_turn()
+def test_logger(output_file):
+    logger = Logger()
+    logger.log('var_a', 'list', '[a,b,c,d,e]')
+    logger.log('var_b', 'int', '23')
+    logger.next_turn()
+    logger.log('var_b', 'stack', '[a,b,e,f,g]')
 
-#logger.to_json('test.json')
-
+    logger.to_json(output_file)
 
