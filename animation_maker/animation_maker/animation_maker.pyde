@@ -1,15 +1,37 @@
 import json
+import copy
 from variable import *
+from frame import *
+
 var = None
+slides = []
+slide_number = 0
 def setup():
-    global var
+    global var, slides, slide_number
     size(720, 480)
-    with open('test.json') as f:
-        data = json.load(f)
-        print(data)
+
+    object_tracker = []
     
-    var = Variable('counter', '1', 255, 255)
+    var = Variable('i', '1', 255, 255)
+    object_tracker.append(var)
+    newFrame = Frame(copy.deepcopy(object_tracker))
+    slides.append(newFrame)
+
+    var2 = Variable('j', '2', 360, 360)
+    object_tracker.append(var2)
+    slides.append(Frame(copy.deepcopy(object_tracker)))
     
 def draw():
     background(255)
-    var.draw(color(44, 218, 240))
+    slides[slide_number].draw()
+    
+def keyReleased():
+    global slide_number
+    if (key == CODED):
+        if keyCode == RIGHT and (slide_number + 1 < len(slides)):
+            slide_number += 1
+            print(slide_number)
+
+        if keyCode == LEFT and (slide_number - 1 >= 0):
+            slide_number -= 1
+            print(slide_number)
