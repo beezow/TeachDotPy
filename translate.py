@@ -13,11 +13,13 @@ def translate(line):
     @param line: string representing a line of code
     '''
 
-
     if re.compile('[+\-*/]=').search(line):
         line = remove_plus_eq(line)
     if re.compile('=').search(line):
         return replace_assign(line)
+
+    if re.compile('^for ').search(line):
+        return modify_forloop(line)
 
     return [line]
     #Other stuff
@@ -48,6 +50,19 @@ def replace_assign(line):
                 left_obj[i] + ")), " + left_obj[i] + ")")
 
     return assignment_li
+
+
+def modify_forloop(line):
+    '''
+    Append a logger for iterator variable of for-loop
+    '''
+    modified_forloop = [line]
+    no_for_line = re.sub("for\W+", "", line)
+    iterator_name = re.split("\W+in\W+", no_for_line)[0]
+    modified_forloop.append("    self.logger.log(\"" + iterator_name + "\"" + ", str(type(" +
+            iterator_name + ")), " + iterator_name + ");")
+    return modified_forloop
+
 
 def test_translate():
     print(translate("a = b"))
