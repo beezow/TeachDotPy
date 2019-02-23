@@ -2,6 +2,7 @@ import json
 import copy
 from variable import *
 from frame import *
+from visual_list import *
 
 var = None
 slides = []
@@ -19,6 +20,10 @@ def setup():
 
     var2 = Variable('j', '2', 360, 360)
     object_tracker.append(var2)
+    slides.append(Frame(copy.deepcopy(object_tracker)))
+    
+    vis_list = Visual_List('list', [1,2,3,4], 30, 30)
+    object_tracker.append(vis_list)
     slides.append(Frame(copy.deepcopy(object_tracker)))
     
 def draw():
