@@ -15,7 +15,7 @@ def setup():
 
     object_tracker = []
     
-    another_list = list_of_objects("log/teach.json")
+    another_list = list_of_objects("../../test/spiral_matrix.json")
     for p in another_list:
         if p in object_tracker:
             replaceIndex = object_tracker.index(p)
