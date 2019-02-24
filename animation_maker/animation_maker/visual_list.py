@@ -26,9 +26,17 @@ class Visual_List(object):
         
     def draw(self):
         stroke(self.color_red,self.color_green, self.color_blue)
+<<<<<<< HEAD
+        for i, item in enumerate(self.data):
+            var_name = ''
+            if i == len(self.data) - 1:
+                var_name = self.name
+            Variable(var_name, item, self.x, self.y + (3 * width / 32) * i).draw()
+=======
         for var in self.var_collection:
             var.draw()
 
+>>>>>>> 103497c89f510b7fbc6b7608d490a104fd7ecf14
         stroke(0)
             
     def __eq__(self, other):

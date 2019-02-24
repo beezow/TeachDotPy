@@ -18,7 +18,7 @@ class Two_Dimensional_List(object):
                 if i == 0 and j == len(self.data[i]) - 1:
                     var_name = self.name
                 Variable(var_name, item, self.x, self.y + (self.size + self.gap) * j).draw()
-            translate(45, 0)
+            translate(3 * width / 32, 0)
 
     def update_list(self, new_data):
         self.data = new_data

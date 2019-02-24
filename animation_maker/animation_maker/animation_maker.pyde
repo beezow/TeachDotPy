@@ -6,12 +6,15 @@ from visual_list import *
 from json_parser import *
 from two_dimensional_list import *
 
+w = 1080
+h = w * 2 / 3
+
 var = None
 slides = []
 slide_number = 0
 def setup():
     global var, slides, slide_number
-    size(720, 480)
+    size(w, h)
 
     object_tracker = []
     
