@@ -43,15 +43,16 @@ def setup():
     
 def draw():
     background(255)
-    slides[slide_number].draw()
+    if (len(slides) != 0): 
+        slides[slide_number].draw()
+    else:
+        print("JSON FILE IS EMPTY")
     
 def keyReleased():
     global slide_number
     if (key == CODED):
         if keyCode == RIGHT and (slide_number + 1 < len(slides)):
             slide_number += 1
-            #print(slide_number)
 
         if keyCode == LEFT and (slide_number - 1 >= 0):
             slide_number -= 1
-            #print(slide_number)
