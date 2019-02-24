@@ -1,9 +1,10 @@
 from variable import *
 from visual_list import *
+from highlighter import *
 
 class Two_Dimensional_List(object):
     
-    def __init__(self, name, data, x=0, y=0, color = color(255, 255, 255), size = 40, gap = 5):
+    def __init__(self, name, data, x=0, y=0, color = color(255, 255, 255), size = 90, gap = 5):
         self.name = name
         self.data = data
         self.x = x
@@ -22,11 +23,28 @@ class Two_Dimensional_List(object):
 
         for var in self.var_collection:
             var.draw()
+            #print(red(var.color), green(var.color), blue(var.color))
+
+    def __eq__(self, other):
+        '''
+        Overrides equality to check only for name equality
+        '''
+        return self.name == other.name
+    
+    def highlight_coord(self, x, y):
+        len_y = len(self.data)
+        len_x = len(self.data[0])
+        self.var_collection[y * len_x + x] = highlight(self.var_collection[y * len_x + x])
+        #self.var_collection[y * len_x + x].color = 0
     
     def set_x(self, x):
         self.x = x
-        self.update_var_collections()
-
+        index = 0
+        for i in range(len(self.data)):
+            for j in range(len(self.data[i])):
+                self.var_collection[index].x = self.x + (3 * width / 32) * i
+                index += 1
+                #self.var_collection[index].y = self.y + (3 * width / 32) * j,
     def update_list(self, new_data):
         self.data = new_data
         

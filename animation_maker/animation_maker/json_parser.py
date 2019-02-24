@@ -31,7 +31,6 @@ def list_of_objects(file_name):
                 objects.append(copied_queue)
 
             if p["type"] == "<class 'list'>":
-                print(p["data"])
                 if len(p["data"]) != 0 and isinstance(p["data"][0], list):
                     # 2d array
                     new_2d_list = Two_Dimensional_List(p["name"], p["data"], y=top_margin, size = width / 12)
@@ -63,6 +62,18 @@ def list_of_objects(file_name):
                     objects.append(vis_list)
                 else:
                     objects.append(Variable(p["name"], p["data"], 100, top_margin, size = width / 12))
+            if p["type"] == "<class 'list'>-acc":
+                to_modify = get_item(objects, p["name"])
+                if len(p["index"]) == 2:
+                    index = p["index"]
+                    copy_data = copy.deepcopy(to_modify.data)
+                    
+                    two_list = Two_Dimensional_List(p["name"], copy_data, y = top_margin)
+                    
+                    two_list.highlight_coord(index[1], index[0])
+                    #two_list.var_collection[0].color = color(0, 0, 255)
+                    #two_list.var_collection[y * len_x + x] = highlight(two_list.var_collection[y * len_x + x])
+                    objects.append(two_list)
             if p["type"] == "<class 'string'>":
                 objects.append(Variable(p["name"], p["data"], 100, 100))
         return objects
