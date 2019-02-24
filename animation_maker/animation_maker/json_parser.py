@@ -37,11 +37,11 @@ def list_of_objects(file_name):
         objects = []
         for p in data["steps"]:
             if p["type"] == "<collections.deque>":
-                objects.append(Queue(p["name"], p["type"], p["data"], p["index"]))
+                objects.append(Visual_List(p["name"], p["type"], p["data"], p["index"], 0, 0))
             if p["type"] == "<class 'list'>":
                 objects.append(Visual_List(p["name"], p["data"], 0, 0))
             if p["type"] == "<class 'int'>":
-                objects.append(Variable(p["name"], p["data"], 0, 0))
+                objects.append(Variable(p["name"], p["data"], 100, 100))
             if p["type"] == "<class 'string'>":
-                objects.append(Variable(p["name"], p["data"], 0, 0))
+                objects.append(Variable(p["name"], p["data"], 100, 100))
         return objects
