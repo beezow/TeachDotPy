@@ -1,6 +1,16 @@
 # teach.py
 A new open source project built for the Open Source Challenge of HackIllinois 2019 by Charles Agriogianis, Andrew Fei, Maxwell Jong, Albert Li, Theodore Li, and Drew Zoghby.
 
+## Running teach.py
+For command line arguemnts
+
+'./teach --help'
+
+To run on linux
+
+'./teach script_to_animate.py'
+
+Currently no jar for windows so must be run through Processing IDE
 ## About teach.py
 For many beginners, visualizing code is often difficult and intimidating. Computer science concepts such as lists, loops, and queues can be very confusing. *teach.py* is developed primarily with educators in mind to better demonstrate these fundamental ideas. 
 *teach.py* parses Python code and translates it into visual representations, creating **meaningful** and **powerful** images and animations.
