@@ -4,11 +4,11 @@ A new open source project built for the Open Source Challenge of HackIllinois 20
 ## Running teach.py
 For command line arguemnts
 
-'./teach --help'
+`./teach --help`
 
 To run on linux
 
-'./teach script_to_animate.py'
+`./teach script_to_animate.py`
 
 Currently no jar for windows so must be run through Processing IDE
 ## About teach.py
