@@ -1,13 +1,13 @@
 {
     "steps": [
         {
-            "name": "a",
+            "name": "array",
             "type": "<class 'list'>",
             "data": [],
             "index": null
         },
         {
-            "name": "a",
+            "name": "array",
             "type": "<class 'list'>",
             "data": [
                 1
@@ -15,7 +15,7 @@
             "index": 1
         },
         {
-            "name": "a",
+            "name": "array",
             "type": "<class 'list'>",
             "data": [
                 1,
@@ -24,7 +24,7 @@
             "index": 2
         },
         {
-            "name": "a",
+            "name": "array",
             "type": "<class 'list'>",
             "data": [
                 1,
@@ -34,7 +34,7 @@
             "index": 3
         },
         {
-            "name": "a",
+            "name": "array",
             "type": "<class 'list'>",
             "data": [
                 1,

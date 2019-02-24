@@ -1,49 +1,49 @@
 {
     "steps": [
         {
-            "name": "q",
+            "name": "queue",
             "type": "<class 'queue.Queue'>",
             "data": [],
             "index": null
         },
         {
-            "name": "q",
+            "name": "queue",
             "type": "<class 'queue.Queue'>-put",
             "data": 2,
             "index": null
         },
         {
-            "name": "q",
+            "name": "queue",
             "type": "<class 'queue.Queue'>-put",
             "data": 3,
             "index": null
         },
         {
-            "name": "q",
+            "name": "queue",
             "type": "<class 'queue.Queue'>-put",
             "data": 7,
             "index": null
         },
         {
-            "name": "q",
+            "name": "queue",
             "type": "<class 'queue.Queue'>-put",
             "data": 11,
             "index": null
         },
         {
-            "name": "q",
+            "name": "queue",
             "type": "<class 'queue.Queue'>-put",
             "data": 13,
             "index": null
         },
         {
-            "name": "q",
+            "name": "queue",
             "type": "<class 'queue.Queue'>-put",
             "data": 72,
             "index": null
         },
         {
-            "name": "q",
+            "name": "queue",
             "type": "<class 'queue.Queue'>-get",
             "data": null,
             "index": null
@@ -55,13 +55,13 @@
             "index": null
         },
         {
-            "name": "q",
+            "name": "queue",
             "type": "<class 'queue.Queue'>-get",
             "data": null,
             "index": null
         },
         {
-            "name": "q",
+            "name": "queue",
             "type": "<class 'queue.Queue'>-put",
             "data": 3,
             "index": null
