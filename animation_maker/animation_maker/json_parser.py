@@ -4,6 +4,7 @@ import copy
 import re
 from visual_list import *
 from variable import *
+from highlighter import *
 
 def list_of_objects(file_name):
     with open(file_name) as json_file:
@@ -26,8 +27,12 @@ def list_of_objects(file_name):
                     
                     copied_array = copy.deepcopy(to_modify.data)
                     copied_array[index_var.data] = p["data"]
+                    
+                    vis_list = Visual_List(list_name_stripped, copied_array, 0, 0)
+                    
+                    vis_list.var_collection[index_var.data] = highlight(vis_list.var_collection[index_var.data])
 
-                    objects.append(Visual_List(list_name_stripped, copied_array, 0, 0))
+                    objects.append(vis_list)
                     #print(copied_array)
                 else:
                     objects.append(Variable(p["name"], p["data"], 100, 45 * p["data"]))

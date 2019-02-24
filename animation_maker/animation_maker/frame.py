@@ -7,6 +7,6 @@ class Frame(object):
         new_obj_x_coord = self.spacing
         #print(type(self.objects[0]))
         for i, object in enumerate(self.objects):
-            object.x = new_obj_x_coord
+            object.set_x(new_obj_x_coord)
             object.draw()
             new_obj_x_coord += object.block_width + self.spacing

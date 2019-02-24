@@ -53,6 +53,9 @@ class Variable(object):
         self.tint = color(0, 0, 255)
     def de_highlight(self):
         self.tint = color(255, 255, 255)
+    
+    def set_x(self, x):
+        self.x = x
 
     def print_poly(self):
         self.poly.setFill(self.tint)

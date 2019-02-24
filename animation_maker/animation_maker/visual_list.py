@@ -20,14 +20,15 @@ class Visual_List(object):
 
         self.size = size
         self.gap = gap
-    
+        
+        self.var_collection = []
+        self.update_var_collection()
+        
     def draw(self):
         stroke(self.color_red,self.color_green, self.color_blue)
-        for i, item in enumerate(self.data):
-            var_name = ''
-            if i == len(self.data) - 1:
-                var_name = self.name
-            Variable(var_name, item, self.x, self.y + (self.size + self.gap) * i).draw()
+        for var in self.var_collection:
+            var.draw()
+
         stroke(0)
             
     def __eq__(self, other):
@@ -38,3 +39,18 @@ class Visual_List(object):
     
     def update_list(self, new_data):
         self.data = new_data
+    
+    def set_x(self, x):
+        self.x = x
+        for var in self.var_collection:
+            var.x = x
+    
+    def update_var_collection(self):
+        self.var_collection = []
+        for i, item in enumerate(self.data):
+            var_name = ''
+            if i == len(self.data) - 1:
+                var_name = self.name
+            #print(self.name, self.x)
+            var = Variable(var_name, item, self.x, self.y + (self.size + self.gap) * i)
+            self.var_collection.append(var)
