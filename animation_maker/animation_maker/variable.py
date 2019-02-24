@@ -1,6 +1,5 @@
 class Variable(object):
     
-    
     def __init__(self, name, data, x=0, y=0, color=color(255,255,255), size=40, textsize=18, spacing=4):
         # var name
         self.name = name

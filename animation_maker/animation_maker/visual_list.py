@@ -32,7 +32,7 @@ class Visual_List(object):
         for var in self.var_collection:
             var.draw()
         stroke(0)
-            
+
     def __eq__(self, other):
         '''
         Overrides equality to check only for name equality
@@ -49,9 +49,22 @@ class Visual_List(object):
     
     def update_var_collection(self):
         self.var_collection = []
-        for i, item in enumerate(self.data):
+        additional_width = 0
+        # the number of variable objects in a column
+        i = 0
+        # the number of columns
+        j = 0
+        for item in self.data:
             var_name = ''
             if i == len(self.data) - 1:
                 var_name = self.name
-            var = Variable(var_name, item, self.x, self.y + (3 * width / 32) * i, size = width / 12)
+            if (self.y + (3 * width / 32) * i >= height):
+                i = 0
+                j += 1
+                additional_width += (3 * width / 32)
+            print(self.x + (3 * width / 32) * j)
+            print(j)
+            var = Variable(var_name, item, self.x + (3 * width / 32) * j, self.y + (3 * width / 32) * i, size = width / 12)
+            i += 1
             self.var_collection.append(var)
+        self.block_width += additional_width

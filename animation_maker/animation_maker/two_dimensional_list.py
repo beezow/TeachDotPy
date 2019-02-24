@@ -9,7 +9,7 @@ class Two_Dimensional_List(object):
         self.x = x
         self.y = y
         self.size = size
-        self.block_width = size
+        self.block_width = (size + gap) * len(data) + gap * 3
         self.gap = gap
         
         self.var_collection = []
@@ -20,7 +20,6 @@ class Two_Dimensional_List(object):
         textFont(myFont, width / 15)
         textSize(width / 15)
 
-        print(self.var_collection)
         for var in self.var_collection:
             var.draw()
     
