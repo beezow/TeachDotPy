@@ -7,12 +7,12 @@ teach.py parses through python code files and translates it into visual animatio
 This creates **meaningful** and **powerful** representations of code compilation.
 
 ## Implementation
-teach.py is broken down into its processing and animation sections. 
+teach.py is broken down into its code analysis and animation sections. 
 
-### Processing:
+### Code Analysis:
 
 Python files are read in as a String. The file is then parsed line by line, and custom logs are inserted into the script. These logs are then used to construct an animation.
 
 ### Animation:
 
-The animation portion interprets json to create meaningful visualizations of data. teach.py then draws the data structure using the parsed json. The result is a stimulating animation for educators to use.
+The animation portion interprets json to create meaningful visualizations of data. Our program then draws the data structure using the parsed json. The result is a stimulating animation for educators to use.
