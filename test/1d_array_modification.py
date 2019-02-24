@@ -1,3 +1,3 @@
-a = [0,0,0,0,0,0]
-for i in range(len(a)):
-    a[i] = len(a)-i
+array= [0,0,0,0,0,0]
+for i in range(len(array)):
+    array[i] = len(array)-i

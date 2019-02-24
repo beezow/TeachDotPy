@@ -1,18 +1,18 @@
 import queue
 
-q = queue.Queue()
+queue = queue.Queue()
 
-q.put(2)
-q.put(3)
-q.put(7)
-q.put(11)
-q.put(13)
-q.put(72)
+queue.put(2)
+queue.put(3)
+queue.put(7)
+queue.put(11)
+queue.put(13)
+queue.put(72)
 
-print(q.queue)
+print(queue.queue)
 
-q.get()
-temp = q.get()
-q.get()
-q.put(temp)
+queue.get()
+temp = queue.get()
+queue.get()
+queue.put(temp)
 
