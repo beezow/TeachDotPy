@@ -80,6 +80,8 @@ def modify_listammend(line):
 def modify_queueget(line):
     vars = line.split('.')
     queue_name = vars[0]
+    log_line = "self.logger.log(\"" + queue_name + "\", " \
++ "str(type(" + queue_name + ")) + \"-get\", None)"
     #print(log_line)
     return [line, log_line]
 
