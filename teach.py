@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 import argparse
 from translate import *
 from logger import Logger
