@@ -4,6 +4,7 @@ from variable import *
 from frame import *
 from visual_list import *
 from json_parser import *
+from two_dimensional_list import *
 
 var = None
 slides = []
@@ -32,9 +33,13 @@ def setup():
     # object_tracker.append(var2)
     # slides.append(Frame(copy.deepcopy(object_tracker)))
     
-    # vis_list = Visual_List('list', [1,2,3,4], 30, 30)
-    # object_tracker.append(vis_list)
-    # slides.append(Frame(copy.deepcopy(object_tracker)))
+    vis_list = Visual_List('list', [1,2,3,4], 30, 30)
+    object_tracker.append(vis_list)
+    slides.append(Frame(copy.deepcopy(object_tracker)))
+    
+    two_d = Two_Dimensional_List('2Dlist', [[1,2,3,4,5],[3,4],[5,6]], 30, 30)
+    object_tracker.append(two_d)
+    slides.append(Frame(copy.deepcopy(object_tracker)))
     
 def draw():
     background(255)
