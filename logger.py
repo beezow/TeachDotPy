@@ -11,7 +11,7 @@ class Logger(object):
         self.logbook['steps'] = []
 
 
-    def log(self, name, typ, data):
+    def log(self, name, typ, data, index=None):
         '''
         Takes in a turn and adds that to the currentTurn list.
         @param name: the variable name to log state as.
@@ -29,7 +29,7 @@ class Logger(object):
             else:
                 state['data'] = data
 
-        state['index'] = self.list_index(name)
+        state['index'] = index
 
         self.logbook['steps'].append(state)
 
