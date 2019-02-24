@@ -87,6 +87,15 @@
             "index": 1
         },
         {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                0,
+                0
+            ]
+        },
+        {
             "name": "i",
             "type": "<class 'int'>",
             "data": 1,
@@ -100,6 +109,15 @@
                 "b"
             ],
             "index": 2
+        },
+        {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                0,
+                1
+            ]
         },
         {
             "name": "i",
@@ -116,6 +134,15 @@
                 "c"
             ],
             "index": 3
+        },
+        {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                0,
+                2
+            ]
         },
         {
             "name": "i",
@@ -135,6 +162,15 @@
             "index": 4
         },
         {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                0,
+                3
+            ]
+        },
+        {
             "name": "i",
             "type": "<class 'int'>",
             "data": 4,
@@ -151,6 +187,15 @@
                 "e"
             ],
             "index": 5
+        },
+        {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                0,
+                4
+            ]
         },
         {
             "name": "up",
@@ -178,6 +223,15 @@
             "index": 6
         },
         {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                1,
+                4
+            ]
+        },
+        {
             "name": "i",
             "type": "<class 'int'>",
             "data": 2,
@@ -196,6 +250,15 @@
                 "o"
             ],
             "index": 7
+        },
+        {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                2,
+                4
+            ]
         },
         {
             "name": "i",
@@ -219,6 +282,15 @@
             "index": 8
         },
         {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                3,
+                4
+            ]
+        },
+        {
             "name": "i",
             "type": "<class 'int'>",
             "data": 4,
@@ -239,6 +311,15 @@
                 "y"
             ],
             "index": 9
+        },
+        {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                4,
+                4
+            ]
         },
         {
             "name": "right",
@@ -270,6 +351,15 @@
             "index": 10
         },
         {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                4,
+                3
+            ]
+        },
+        {
             "name": "i",
             "type": "<class 'int'>",
             "data": 2,
@@ -292,6 +382,15 @@
                 "w"
             ],
             "index": 11
+        },
+        {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                4,
+                2
+            ]
         },
         {
             "name": "i",
@@ -319,6 +418,15 @@
             "index": 12
         },
         {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                4,
+                1
+            ]
+        },
+        {
             "name": "i",
             "type": "<class 'int'>",
             "data": 0,
@@ -343,6 +451,15 @@
                 "u"
             ],
             "index": 13
+        },
+        {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                4,
+                0
+            ]
         },
         {
             "name": "down",
@@ -378,6 +495,15 @@
             "index": 14
         },
         {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                3,
+                0
+            ]
+        },
+        {
             "name": "i",
             "type": "<class 'int'>",
             "data": 2,
@@ -404,6 +530,15 @@
                 "k"
             ],
             "index": 15
+        },
+        {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                2,
+                0
+            ]
         },
         {
             "name": "i",
@@ -433,6 +568,15 @@
                 "f"
             ],
             "index": 16
+        },
+        {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                1,
+                0
+            ]
         },
         {
             "name": "left",
@@ -471,6 +615,15 @@
             "index": 17
         },
         {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                1,
+                1
+            ]
+        },
+        {
             "name": "i",
             "type": "<class 'int'>",
             "data": 2,
@@ -500,6 +653,15 @@
                 "h"
             ],
             "index": 18
+        },
+        {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                1,
+                2
+            ]
         },
         {
             "name": "i",
@@ -532,6 +694,15 @@
                 "i"
             ],
             "index": 19
+        },
+        {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                1,
+                3
+            ]
         },
         {
             "name": "up",
@@ -573,6 +744,15 @@
             "index": 20
         },
         {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                2,
+                3
+            ]
+        },
+        {
             "name": "i",
             "type": "<class 'int'>",
             "data": 3,
@@ -605,6 +785,15 @@
                 "s"
             ],
             "index": 21
+        },
+        {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                3,
+                3
+            ]
         },
         {
             "name": "right",
@@ -648,6 +837,15 @@
             "index": 22
         },
         {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                3,
+                2
+            ]
+        },
+        {
             "name": "i",
             "type": "<class 'int'>",
             "data": 1,
@@ -682,6 +880,15 @@
                 "q"
             ],
             "index": 23
+        },
+        {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                3,
+                1
+            ]
         },
         {
             "name": "down",
@@ -727,6 +934,15 @@
             "index": 24
         },
         {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                2,
+                1
+            ]
+        },
+        {
             "name": "left",
             "type": "<class 'int'>",
             "data": 2,
@@ -769,6 +985,15 @@
                 "m"
             ],
             "index": 25
+        },
+        {
+            "name": "arr",
+            "type": "<class 'list'>-acc",
+            "data": null,
+            "index": [
+                2,
+                2
+            ]
         },
         {
             "name": "up",
