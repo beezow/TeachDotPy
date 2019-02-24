@@ -2,6 +2,9 @@ from variable import *
 from visual_list import *
 
 class Two_Dimensional_List(object):
+    
+    
+    
     def __init__(self, name, data, x, y, color = color(255, 255, 255), size = 40, gap = 5):
         self.name = name
         self.data = data
@@ -12,6 +15,9 @@ class Two_Dimensional_List(object):
         self.gap = gap
     
     def draw(self):
+        myFont = createFont("Monospaced.bold", width / 15)
+        textFont(myFont, width / 15)
+        textSize(width / 15)
         for i in range(len(self.data)):
             for j, item in enumerate(self.data[i]):
                 var_name = ''
