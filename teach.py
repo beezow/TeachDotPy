@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 import argparse
+import os
+
 from translate import *
 from logger import Logger
 
@@ -58,8 +60,9 @@ class File:
 
 parser = argparse.ArgumentParser(description='Animates python code.')
 parser.add_argument('infile', type=str, help='the file to animate')
-parser.add_argument('logfile', type=str, help='the file to save the animation json info')
+parser.add_argument('logfile', type=str, default='log/teach.json', help='the file to save the animation json info')
 args = parser.parse_args()
 
 file = File(args.infile, args.logfile)
 file.run()
+os.system("java -jar processing-py.jar animation_maker/animation_maker/animation_maker.pyde")

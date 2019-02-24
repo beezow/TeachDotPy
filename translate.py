@@ -27,6 +27,9 @@ def translate(line):
     if re.compile('\.get').search(line):
         return modify_queueget(line)
 
+    if re.compile('\.append').search(line):
+        return modify_listammend(line)
+
     return [line]
     #Other stuff
 
@@ -37,6 +40,16 @@ def modify_queueput(line):
     #print(put_value)
     log_line = "self.logger.log(\"" + queue_name + "\", " \
             + "str(type(" + queue_name + ")) + \"-put\", " + put_value + ")"
+    #print(log_line)
+    return [log_line]
+
+def modify_listammend(line):
+    vars = line.split('.')
+    list_name = vars[0]
+    ammend_value = vars[1].split("(")[1].split(")")[0]
+    #print(put_value)
+    log_line = "self.logger.log(\"" + list_name + "\", " \
+            + "str(type(" + list_name + ")), " + list_name + ")"
     #print(log_line)
     return [log_line]
 
