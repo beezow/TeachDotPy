@@ -7,6 +7,7 @@ from variable import *
 from highlighter import *
 
 def list_of_objects(file_name):
+    top_margin = width / 72
     with open(file_name) as json_file:
         data = json.load(json_file)
         objects = []
@@ -14,7 +15,7 @@ def list_of_objects(file_name):
             if p["type"] == "<collections.deque>":
                 objects.append(Visual_List(p["name"], p["type"], p["data"], p["index"], size = width / 12))
             if p["type"] == "<class 'list'>":
-                objects.append(Visual_List(p["name"], p["data"], 0, 0, size = width / 12))
+                objects.append(Visual_List(p["name"], p["data"], 0, top_margin, size = width / 12))
             if p["type"] == "<class 'int'>":
                 if check_array_access(p["name"]):
                     list_name_stripped = p["name"].split('[')[0]
@@ -28,7 +29,7 @@ def list_of_objects(file_name):
                     copied_array = copy.deepcopy(to_modify.data)
                     copied_array[index_var.data] = p["data"]
                     
-                    vis_list = Visual_List(list_name_stripped, copied_array, 0, 0, size = width / 12)
+                    vis_list = Visual_List(list_name_stripped, copied_array, 0, top_margin, size = width / 12)
                     
                     vis_list.var_collection[index_var.data] = highlight(vis_list.var_collection[index_var.data])
 
@@ -36,7 +37,7 @@ def list_of_objects(file_name):
 
                     #print(copied_array)
                 else:
-                    objects.append(Variable(p["name"], p["data"], 100, (3 * width / 32) * p["data"], size = width / 12))
+                    objects.append(Variable(p["name"], p["data"], 100, top_margin + (3 * width / 32) * p["data"], size = width / 12))
             if p["type"] == "<class 'string'>":
                 objects.append(Variable(p["name"], p["data"], 100, 100))
         return objects
