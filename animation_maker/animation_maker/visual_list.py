@@ -5,7 +5,7 @@ class Visual_List(object):
     color_blue = 0
     color_green = 255
     
-    def __init__(self, name, data, x, y, color=color(255,255,255), size=40, gap=5):
+    def __init__(self, name, data, x=0, y=0, color=color(255,255,255), size=40, gap=5):
         self.color_red = Visual_List.color_red
         self.color_green = Visual_List.color_green
         self.color_blue = Visual_List.color_blue
@@ -50,6 +50,5 @@ class Visual_List(object):
             var_name = ''
             if i == len(self.data) - 1:
                 var_name = self.name
-            #print(self.name, self.x)
             var = Variable(var_name, item, self.x, self.y + (3 * width / 32) * i, size = width / 12)
             self.var_collection.append(var)

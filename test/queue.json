@@ -4,67 +4,67 @@
             "name": "q",
             "type": "<class 'queue.Queue'>",
             "data": [],
-            "index": []
+            "index": null
         },
         {
             "name": "q",
             "type": "<class 'queue.Queue'>-put",
             "data": 2,
-            "index": []
+            "index": null
         },
         {
             "name": "q",
             "type": "<class 'queue.Queue'>-put",
             "data": 3,
-            "index": []
+            "index": null
         },
         {
             "name": "q",
             "type": "<class 'queue.Queue'>-put",
             "data": 7,
-            "index": []
+            "index": null
         },
         {
             "name": "q",
             "type": "<class 'queue.Queue'>-put",
             "data": 11,
-            "index": []
+            "index": null
         },
         {
             "name": "q",
             "type": "<class 'queue.Queue'>-put",
             "data": 13,
-            "index": []
+            "index": null
         },
         {
             "name": "q",
             "type": "<class 'queue.Queue'>-put",
             "data": 72,
-            "index": []
+            "index": null
         },
         {
             "name": "q",
             "type": "<class 'queue.Queue'>-get",
             "data": null,
-            "index": []
+            "index": null
         },
         {
             "name": "temp",
             "type": "<class 'int'>",
             "data": 3,
-            "index": []
+            "index": null
         },
         {
             "name": "q",
             "type": "<class 'queue.Queue'>-get",
             "data": null,
-            "index": []
+            "index": null
         },
         {
             "name": "q",
             "type": "<class 'queue.Queue'>-put",
             "data": 3,
-            "index": []
+            "index": null
         }
     ]
 }

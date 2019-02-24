@@ -3,6 +3,7 @@ import ast
 import copy
 import re
 from visual_list import *
+from queue_list import *
 from variable import *
 from highlighter import *
 
@@ -12,8 +13,21 @@ def list_of_objects(file_name):
         data = json.load(json_file)
         objects = []
         for p in data["steps"]:
-            if p["type"] == "<collections.deque>":
-                objects.append(Visual_List(p["name"], p["type"], p["data"], p["index"], size = width / 12))
+            if p["type"] == "<class 'queue.Queue'>":
+                print('queue')
+                objects.append(Queue_List(p["name"], p["data"], size = width / 12))
+            elif p["type"] == "<class 'queue.Queue'>-put":
+                print('put')
+                copied_queue = copy.deepcopy(get_item(objects, p["name"]))
+                # Highlighting done in queue
+                copied_queue.put(p["data"])
+                objects.append(copied_queue)
+            elif p["type"] == "<class 'queue.Queue'>-get":
+                print('get')
+                copied_queue = copy.deepcopy(get_item(objects, p["name"]))
+                copied_queue.get()
+                objects.append(copied_queue)
+
             if p["type"] == "<class 'list'>":
                 objects.append(Visual_List(p["name"], p["data"], 0, top_margin, size = width / 12))
             if p["type"] == "<class 'int'>":
