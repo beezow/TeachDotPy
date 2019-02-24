@@ -3,7 +3,7 @@ from visual_list import *
 
 class Two_Dimensional_List(object):
     
-    def __init__(self, name, data, x, y, color = color(255, 255, 255), size = 40, gap = 5):
+    def __init__(self, name, data, x=0, y=0, color = color(255, 255, 255), size = 40, gap = 5):
         self.name = name
         self.data = data
         self.x = x
@@ -21,8 +21,11 @@ class Two_Dimensional_List(object):
                 var_name = ''
                 if i == 0 and j == len(self.data[i]) - 1:
                     var_name = self.name
-                Variable(var_name, item, self.x, self.y + (self.size + self.gap) * j).draw()
+                Variable(var_name, item, self.x, self.y + (3 * width / 32) * j, size = self.size).draw()
             translate(3 * width / 32, 0)
+    
+    def set_x(self, x):
+        self.x = x
 
     def update_list(self, new_data):
         self.data = new_data

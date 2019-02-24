@@ -6,6 +6,7 @@ from visual_list import *
 from queue_list import *
 from variable import *
 from highlighter import *
+from two_dimensional_list import *
 
 def list_of_objects(file_name):
     top_margin = width / 72
@@ -14,7 +15,7 @@ def list_of_objects(file_name):
         objects = []
         for p in data["steps"]:
             if p["type"] == "<class 'queue.Queue'>":
-                objects.append(Queue_List(p["name"], p["data"], size = width / 12))
+                objects.append(Queue_List(p["name"], p["data"], y=top_margin, size = width / 12))
             elif p["type"] == "<class 'queue.Queue'>-put":
                 copied_queue = copy.deepcopy(get_item(objects, p["name"]))
                 # Highlighting done in queue
@@ -26,11 +27,18 @@ def list_of_objects(file_name):
                 objects.append(copied_queue)
 
             if p["type"] == "<class 'list'>":
-                new_list = Visual_List(p["name"], p["data"], 0, top_margin, size = width / 12)
-                if p["index"] is not None:
-                    # need to highlight something
-                    new_list.var_collection[-1] = highlight(new_list.var_collection[-1])
-                objects.append(new_list)
+                if isinstance(p["data"][0], list):
+                    # 2d array
+                    new_2d_list = Two_Dimensional_List(p["name"], p["data"], y=top_margin, size = width / 12)
+                    objects.append(new_2d_list)
+                    #print("it's a list")
+                else:
+                    # 1d array
+                    new_list = Visual_List(p["name"], p["data"], 0, top_margin, size = width / 12)
+                    if p["index"] is not None:
+                        # need to highlight something
+                        new_list.var_collection[-1] = highlight(new_list.var_collection[-1])
+                    objects.append(new_list)
             if p["type"] == "<class 'int'>":
                 if check_array_access(p["name"]):
                     # Checks for a[i] type variables
