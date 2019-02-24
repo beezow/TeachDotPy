@@ -1,35 +1,8 @@
 import json
 import ast
+import re
 from visual_list import *
 from variable import *
-
-class Queue:
-    def __init__(self, name, type, data, index):
-        self.name = name
-        self.type = type
-        self.data = data
-        self.index = index
-
-class Int:
-    def __init__(self, name, type, data, index):
-        self.name = name
-        self.type = type
-        self.data = data
-        self.index = index
-
-class String:
-    def __init__(self, name, type, data, index):
-        self.name = name
-        self.type = type
-        self.data = data
-        self.index = index
-
-class List:
-    def __init__(self, name, type, data, index):
-        self.name = name
-        self.type = type
-        self.data = data
-        self.index = index
 
 def list_of_objects(file_name):
     with open(file_name) as json_file:
@@ -37,7 +10,7 @@ def list_of_objects(file_name):
         objects = []
         for p in data["steps"]:
             if p["type"] == "<collections.deque>":
-                objects.append(Visual_List(p["name"], p["type"], p["data"], p["index"], 0, 0))
+                objects.append(Visual_List(p["name"], p["type"], p["data"], p["index"]))
             if p["type"] == "<class 'list'>":
                 objects.append(Visual_List(p["name"], p["data"], 0, 0))
             if p["type"] == "<class 'int'>":

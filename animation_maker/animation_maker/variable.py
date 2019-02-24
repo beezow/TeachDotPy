@@ -1,5 +1,5 @@
 class Variable(object):
-    def __init__(self, name, data, x, y, color=color(255,255,255), size=40, textsize=18, spacing=4):
+    def __init__(self, name, data, x=0, y=0, color=color(255,255,255), size=40, textsize=18, spacing=4):
         # var name
         self.name = name
         # data assigned
@@ -21,14 +21,15 @@ class Variable(object):
         fill(self.color)
         # Creates rect with rounded corners
         if textWidth(str(self.data)) > self.size:
-            self.block_width = textWidth(str(self.data))
+            self.block_width = textWidth(str(self.data)) + 2 * self.spacing
         else:
             self.block_width = self.size
         rect(self.x, self.y, self.block_width, self.block_height, self.size / 5)
         fill(0)
         # Creates data text
         text_x_coord = self.x + (self.block_width - textWidth(str(self.data))) / 2
-        text(str(self.data), text_x_coord, self.y + self.textsize)
+        text_y_coord = self.y + self.block_height - self.textsize / 2
+        text(str(self.data), text_x_coord, text_y_coord)
         textSize(self.textsize)
         
         #Creates variable label text
@@ -40,6 +41,12 @@ class Variable(object):
 
     def update_data(self, data):
         self.data = data
+    
+    def __eq__(self, other):
+        '''
+        Overrides equality to check only for name equality
+        '''
+        return self.name == other.name
     
     def re_highlight(self):
         self.highlight = True
