@@ -15,7 +15,7 @@ def setup():
 
     object_tracker = []
     
-    another_list = list_of_objects("test1DList.json")
+    another_list = list_of_objects("/home/drew/projects/teach/TeachDotPy/log/teach.json")
     for p in another_list:
         if p in object_tracker:
             replaceIndex = object_tracker.index(p)
@@ -33,13 +33,13 @@ def setup():
     # object_tracker.append(var2)
     # slides.append(Frame(copy.deepcopy(object_tracker)))
     
-    vis_list = Visual_List('list', [1,2,3,4], 30, 30)
-    object_tracker.append(vis_list)
-    slides.append(Frame(copy.deepcopy(object_tracker)))
+    # vis_list = Visual_List('list', [1,2,3,4], 30, 30)
+    # object_tracker.append(vis_list)
+    # slides.append(Frame(copy.deepcopy(object_tracker)))
     
-    two_d = Two_Dimensional_List('2Dlist', [[1,2,3,4,5],[3,4],[5,6]], 30, 30)
-    object_tracker.append(two_d)
-    slides.append(Frame(copy.deepcopy(object_tracker)))
+    # two_d = Two_Dimensional_List('2Dlist', [[1,2,3,4,5],[3,4],[5,6]], 30, 30)
+    # object_tracker.append(two_d)
+    # slides.append(Frame(copy.deepcopy(object_tracker)))
     
 def draw():
     background(255)
