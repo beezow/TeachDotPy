@@ -49,8 +49,8 @@ def modify_listammend(line):
     ammend_value = vars[1].split("(")[1].split(")")[0]
     #print(put_value)
     log_line = "self.logger.log(\"" + list_name + "\", " \
-            + "str(type(" + list_name + ")), " + list_name + ")"
-    #print(log_line)
+            + "str(type(" + list_name + ")), " + list_name + ", index=len(" + list_name + "))"
+    #print(log_line):
     return [line, log_line]
 
 def modify_queueget(line):
