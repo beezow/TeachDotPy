@@ -60,7 +60,7 @@ class File:
 
 parser = argparse.ArgumentParser(description='Animates python code.')
 parser.add_argument('infile', type=str, help='the file to animate')
-parser.add_argument('logfile', type=str, default='log/teach.json', help='the file to save the animation json info')
+parser.add_argument('--logfile', type=str, default='animation_maker/animation_maker/log/teach.json', help='the file to save the animation json info')
 args = parser.parse_args()
 
 file = File(args.infile, args.logfile)
