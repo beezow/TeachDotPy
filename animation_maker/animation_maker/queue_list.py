@@ -11,3 +11,5 @@ class Queue_List(Visual_List):
     def get(self):
         if (self.data > 0):
             del self.data [0]
+            self.update_var_collection()
+            
