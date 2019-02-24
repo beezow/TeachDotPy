@@ -4,8 +4,8 @@ class Visual_List(object):
     color_red = 0
     color_blue = 0
     color_green = 255
-    
-    def __init__(self, name, data, x, y, color=color(255,255,255), size=40, gap=5):
+
+    def __init__(self, name, data, x=0, y=0, color=color(255,255,255), size=40, gap=5):
         self.color_red = Visual_List.color_red
         self.color_green = Visual_List.color_green
         self.color_blue = Visual_List.color_blue
@@ -20,14 +20,17 @@ class Visual_List(object):
 
         self.size = size
         self.gap = gap
-    
+        
+        self.var_collection = []
+        self.update_var_collection()
+        
     def draw(self):
+        myFont = createFont("Monospaced.bold", width / 15)
+        textFont(myFont, width / 15)
+        textSize(width / 15)
         stroke(self.color_red,self.color_green, self.color_blue)
-        for i, item in enumerate(self.data):
-            var_name = ''
-            if i == len(self.data) - 1:
-                var_name = self.name
-            Variable(var_name, item, self.x, self.y + (self.size + self.gap) * i).draw()
+        for var in self.var_collection:
+            var.draw()
         stroke(0)
             
     def __eq__(self, other):
@@ -38,3 +41,17 @@ class Visual_List(object):
     
     def update_list(self, new_data):
         self.data = new_data
+    
+    def set_x(self, x):
+        self.x = x
+        for var in self.var_collection:
+            var.x = x
+    
+    def update_var_collection(self):
+        self.var_collection = []
+        for i, item in enumerate(self.data):
+            var_name = ''
+            if i == len(self.data) - 1:
+                var_name = self.name
+            var = Variable(var_name, item, self.x, self.y + (3 * width / 32) * i, size = width / 12)
+            self.var_collection.append(var)

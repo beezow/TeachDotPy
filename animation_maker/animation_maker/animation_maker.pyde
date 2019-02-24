@@ -6,16 +6,29 @@ from visual_list import *
 from json_parser import *
 from two_dimensional_list import *
 
+w = 1080
+h = w * 2 / 3
+
 var = None
 slides = []
 slide_number = 0
 def setup():
     global var, slides, slide_number
-    size(720, 480)
+    size(w, h)
+    
+    
+    myFont = createFont("Monospaced.bold", width / 15)
+    textFont(myFont, width / 15)
+    textSize(width / 15)
 
     object_tracker = []
     
+<<<<<<< HEAD
     another_list = list_of_objects("../../test/spiral_matrix.json")
+=======
+
+    another_list = list_of_objects("log/teach.json")
+>>>>>>> 75a17ab97fe53869cd0d892c5d22b0401f52a250
     for p in another_list:
         if p in object_tracker:
             replaceIndex = object_tracker.index(p)

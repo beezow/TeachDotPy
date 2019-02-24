@@ -1,4 +1,6 @@
 class Variable(object):
+    
+    
     def __init__(self, name, data, x=0, y=0, color=color(255,255,255), size=40, textsize=18, spacing=4):
         # var name
         self.name = name
@@ -18,6 +20,9 @@ class Variable(object):
         self.spacing = spacing
 
     def draw(self):
+        myFont = createFont("Monospaced.bold", width / 15)
+        textFont(myFont, width / 15)
+        textSize(width / 15)
         fill(self.color)
         # Creates rect with rounded corners
         if textWidth(str(self.data)) > self.size:
@@ -33,7 +38,7 @@ class Variable(object):
         textSize(self.textsize)
         
         #Creates variable label text
-        text(self.name, self.x, self.y + self.size + self.textsize)
+        text(self.name, self.x + self.size / 2 - textWidth(self.name) / 2, self.y + self.size + self.textsize)
         
     def set_coords(self, x, y):
         self.x = x
@@ -53,6 +58,9 @@ class Variable(object):
         self.tint = color(0, 0, 255)
     def de_highlight(self):
         self.tint = color(255, 255, 255)
+    
+    def set_x(self, x):
+        self.x = x
 
     def print_poly(self):
         self.poly.setFill(self.tint)
