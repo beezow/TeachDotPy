@@ -26,6 +26,7 @@ class Two_Dimensional_List(object):
     
     def set_x(self, x):
         self.x = x
+        self.update_var_collections()
 
     def update_list(self, new_data):
         self.data = new_data
@@ -37,4 +38,4 @@ class Two_Dimensional_List(object):
                 var_name = ''
                 if i == 0 and j == len(self.data[i]) - 1:
                     var_name = self.name
-                self.var_collection.append(Variable(var_name, item, self.x + (3 * height / 32) * i, self.y + (3 * width / 32) * j, size = self.size))
+                self.var_collection.append(Variable(var_name, item, self.x + (3 * width / 32) * i, self.y + (3 * width / 32) * j, size = self.size))
