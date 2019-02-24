@@ -22,16 +22,9 @@ def setup():
     
     another_list = list_of_objects("test1DList.json")
     for p in another_list:
+        p.fill(204)
         object_tracker.append(p)
         slides.append(Frame(copy.deepcopy(object_tracker)))
-
-    var2 = Variable('j', '2', 360, 360)
-    object_tracker.append(var2)
-    slides.append(Frame(copy.deepcopy(object_tracker)))
-    
-    vis_list = Visual_List('list', [1,2,3,4], 30, 30)
-    object_tracker.append(vis_list)
-    slides.append(Frame(copy.deepcopy(object_tracker)))
     
     two_dim = Two_Dimensional_List('2dlist', [[1,2],[3,4],[5,6]], 30, 30)
     object_tracker.append(two_dim)
