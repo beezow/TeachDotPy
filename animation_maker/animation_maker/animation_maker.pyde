@@ -23,6 +23,7 @@ def setup():
 
     object_tracker = []
     
+
     another_list = list_of_objects("log/teach.json")
     for p in another_list:
         if p in object_tracker:
