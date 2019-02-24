@@ -1,7 +1,7 @@
-##How to Contribute to teach.py
+# How to Contribute to teach.py
 
-#Report Issues
+## Report Issues
 Make sure that the issue can be replicated, and open an issue with specific description of the input that caused the issue
 
-#Add Functionality
+## Add Functionality
 Simply open a pull request with details on the functionality added. 
