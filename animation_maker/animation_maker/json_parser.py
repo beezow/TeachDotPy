@@ -14,31 +14,31 @@ def list_of_objects(file_name):
         objects = []
         for p in data["steps"]:
             if p["type"] == "<class 'queue.Queue'>":
-                print('queue')
                 objects.append(Queue_List(p["name"], p["data"], size = width / 12))
             elif p["type"] == "<class 'queue.Queue'>-put":
-                print('put')
                 copied_queue = copy.deepcopy(get_item(objects, p["name"]))
                 # Highlighting done in queue
                 copied_queue.put(p["data"])
                 objects.append(copied_queue)
             elif p["type"] == "<class 'queue.Queue'>-get":
-                print('get')
                 copied_queue = copy.deepcopy(get_item(objects, p["name"]))
                 copied_queue.get()
                 objects.append(copied_queue)
 
             if p["type"] == "<class 'list'>":
-                objects.append(Visual_List(p["name"], p["data"], 0, top_margin, size = width / 12))
+                new_list = Visual_List(p["name"], p["data"], 0, top_margin, size = width / 12)
+                if p["index"] is not None:
+                    # need to highlight something
+                    new_list.var_collection[-1] = highlight(new_list.var_collection[-1])
+                objects.append(new_list)
             if p["type"] == "<class 'int'>":
                 if check_array_access(p["name"]):
+                    # Checks for a[i] type variables
                     list_name_stripped = p["name"].split('[')[0]
                     index_name = re.findall("(?<=\[)[^\]+]", p["name"])
                     
                     to_modify = get_item(objects, list_name_stripped)
                     index_var = get_item(objects, index_name)
-                    #print(index_name)
-                    #print(to_modify.data)
                     
                     copied_array = copy.deepcopy(to_modify.data)
                     copied_array[index_var.data] = p["data"]
@@ -48,8 +48,6 @@ def list_of_objects(file_name):
                     vis_list.var_collection[index_var.data] = highlight(vis_list.var_collection[index_var.data])
 
                     objects.append(vis_list)
-
-                    #print(copied_array)
                 else:
                     objects.append(Variable(p["name"], p["data"], 100, top_margin + (3 * width / 32) * p["data"], size = width / 12))
             if p["type"] == "<class 'string'>":
