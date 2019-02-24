@@ -2,7 +2,6 @@
 import re
 from logger import Logger
 
-
 def variable(name, variable):
     Logger.log(name, str(type(variable)), variable)
 
@@ -15,14 +14,28 @@ def translate(line):
 
     if re.compile('[+\-*/]=').search(line):
         line = remove_plus_eq(line)
+    
     if re.compile('=').search(line):
         return replace_assign(line)
 
     if re.compile('^for ').search(line):
         return modify_forloop(line)
 
+    if re.compile('\.put').search(line):
+        return modify_queueput(line)
+    
     return [line]
     #Other stuff
+
+def modify_queueput(line):
+    vars = line.split('.')
+    queue_name = vars[0]
+    put_value = vars[1].split("(")[1].split(")")[0]
+    print(put_value)
+    log_line = "self.logger.log(\"" + queue_name + "\", " \
+            + "str(type(" + queue_name + ")) + \"-put\", " + put_value + ")"
+    print(log_line)
+    return [log_line]
 
 def remove_plus_eq(line):
     vars = re.split("[+\-*/]=", line)
