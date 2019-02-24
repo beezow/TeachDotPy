@@ -21,13 +21,13 @@ def list_of_objects(file_name):
                     
                     to_modify = get_item(objects, list_name_stripped)
                     index_var = get_item(objects, index_name)
-                    print(to_modify.data)
+                    #print(to_modify.data)
                     
                     copied_array = copy.deepcopy(to_modify.data)
                     #print(copied_array)
                     #print(list_name_stripped, "<class 'list'>", copied_array, p["index"])
                     objects.append(Visual_List(list_name_stripped, "<class 'list'>", copied_array, p["index"]))
-                    print(copied_array)
+                    #print(copied_array)
                 else:
                     objects.append(Variable(p["name"], p["data"], 100, 45 * p["data"]))
             if p["type"] == "<class 'string'>":

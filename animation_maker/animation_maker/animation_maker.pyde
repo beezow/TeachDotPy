@@ -50,8 +50,8 @@ def keyReleased():
     if (key == CODED):
         if keyCode == RIGHT and (slide_number + 1 < len(slides)):
             slide_number += 1
-            print(slide_number)
+            #print(slide_number)
 
         if keyCode == LEFT and (slide_number - 1 >= 0):
             slide_number -= 1
-            print(slide_number)
+            #print(slide_number)
