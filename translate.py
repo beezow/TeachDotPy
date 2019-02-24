@@ -11,9 +11,16 @@ def translate(line):
     Translate all lines of code to be able to be logged
     @param line: string representing a line of code
     '''
-
+    log_line = ""
+    new_line = ""
     if re.compile('[+\-*/]=').search(line):
         line = remove_plus_eq(line)
+
+    #if line.contains
+    #if re.compile('\[.\].\[').search(line):
+     #   print(line)
+      #  log_line = modify_twoaccess(line)
+       # print(log_line)
 
     if re.compile('=').search(line):
         return replace_assign(line)
@@ -22,7 +29,7 @@ def translate(line):
         return modify_forloop(line)
 
     if re.compile('\.put').search(line):
-        return modify_queueput(line)
+        return  modify_queueput(line)
 
     if re.compile('\.get').search(line):
         return modify_queueget(line)
@@ -30,8 +37,23 @@ def translate(line):
     if re.compile('\.append').search(line):
         return modify_listammend(line)
 
+
     return [line]
     #Other stuff
+
+def modify_twoaccess(line):
+    #print(line)
+    line = line.split("append(")[1]
+    splits = line.split("[")
+    #print(splits)
+    array_name = splits[0]
+    index_one_var = splits[1].strip("]")
+    index_two_var = splits[2].strip(")").strip("]")
+    #print("name", array_name)
+    #print("i1", index_one_var)
+    #print("i2", index_two_var)
+    log_line =  "self.logger.log(\"" + array_name + "\", str(type(" + array_name + ")) + \"-acc\" , None, (" + index_one_var + "," + index_two_var + "))"
+    return log_line
 
 def modify_queueput(line):
     vars = line.split('.')
@@ -51,13 +73,13 @@ def modify_listammend(line):
     log_line = "self.logger.log(\"" + list_name + "\", " \
             + "str(type(" + list_name + ")), " + list_name + ", index=len(" + list_name + "))"
     #print(log_line):
+    if line.count("[") == 2 and line.count("]") == 2:
+        log_line += ";" + modify_twoaccess(line) + ";"
     return [line, log_line]
 
 def modify_queueget(line):
     vars = line.split('.')
     queue_name = vars[0]
-    log_line = "self.logger.log(\"" + queue_name + "\", " \
-            + "str(type(" + queue_name + ")) + \"-get\", None)"
     #print(log_line)
     return [line, log_line]
 
