@@ -1,0 +1,108 @@
+{
+    "steps": [
+        {
+            "name": "arr",
+            "type": "<class 'list'>",
+            "data": [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "index": []
+        },
+        {
+            "name": "answer",
+            "type": "<class 'list'>",
+            "data": [],
+            "index": []
+        },
+        {
+            "name": "shift",
+            "type": "<class 'int'>",
+            "data": 1,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 0,
+            "index": []
+        },
+        {
+            "name": "answer",
+            "type": "<class 'list'>",
+            "data": [
+                2
+            ],
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 1,
+            "index": []
+        },
+        {
+            "name": "answer",
+            "type": "<class 'list'>",
+            "data": [
+                2,
+                3
+            ],
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": []
+        },
+        {
+            "name": "answer",
+            "type": "<class 'list'>",
+            "data": [
+                2,
+                3,
+                4
+            ],
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 3,
+            "index": []
+        },
+        {
+            "name": "answer",
+            "type": "<class 'list'>",
+            "data": [
+                2,
+                3,
+                4,
+                5
+            ],
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 4,
+            "index": []
+        },
+        {
+            "name": "answer",
+            "type": "<class 'list'>",
+            "data": [
+                2,
+                3,
+                4,
+                5,
+                1
+            ],
+            "index": []
+        }
+    ]
+}

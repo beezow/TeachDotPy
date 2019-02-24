@@ -21,5 +21,3 @@ while (right > left) and (down > up):
         for i in range(down - 1, up - 1, -1):
             path.append(arr[i][left])
         left += 1
-for i in range(len(path)):
-    print(path[i])
