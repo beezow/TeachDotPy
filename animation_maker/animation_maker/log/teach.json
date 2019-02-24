@@ -1,21 +1,16 @@
 {
     "steps": [
         {
-            "name": "arr",
+            "name": "a",
             "type": "<class 'list'>",
             "data": [
-                1,
-                2,
-                3,
-                4,
-                5
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
             ],
-            "index": []
-        },
-        {
-            "name": "answer",
-            "type": "<class 'list'>",
-            "data": [],
             "index": []
         },
         {
@@ -25,12 +20,12 @@
             "index": []
         },
         {
-            "name": "answer",
-            "type": "<class 'list'>",
-            "data": [
-                2
-            ],
-            "index": []
+            "name": "a[i]",
+            "type": "<class 'int'>",
+            "data": 6,
+            "index": [
+                "i"
+            ]
         },
         {
             "name": "i",
@@ -39,13 +34,12 @@
             "index": []
         },
         {
-            "name": "answer",
-            "type": "<class 'list'>",
-            "data": [
-                2,
-                3
-            ],
-            "index": []
+            "name": "a[i]",
+            "type": "<class 'int'>",
+            "data": 5,
+            "index": [
+                "i"
+            ]
         },
         {
             "name": "i",
@@ -54,14 +48,12 @@
             "index": []
         },
         {
-            "name": "answer",
-            "type": "<class 'list'>",
-            "data": [
-                2,
-                3,
-                4
-            ],
-            "index": []
+            "name": "a[i]",
+            "type": "<class 'int'>",
+            "data": 4,
+            "index": [
+                "i"
+            ]
         },
         {
             "name": "i",
@@ -70,15 +62,12 @@
             "index": []
         },
         {
-            "name": "answer",
-            "type": "<class 'list'>",
-            "data": [
-                2,
-                3,
-                4,
-                5
-            ],
-            "index": []
+            "name": "a[i]",
+            "type": "<class 'int'>",
+            "data": 3,
+            "index": [
+                "i"
+            ]
         },
         {
             "name": "i",
@@ -87,16 +76,26 @@
             "index": []
         },
         {
-            "name": "answer",
-            "type": "<class 'list'>",
-            "data": [
-                2,
-                3,
-                4,
-                5,
-                1
-            ],
+            "name": "a[i]",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": [
+                "i"
+            ]
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 5,
             "index": []
+        },
+        {
+            "name": "a[i]",
+            "type": "<class 'int'>",
+            "data": 1,
+            "index": [
+                "i"
+            ]
         }
     ]
 }

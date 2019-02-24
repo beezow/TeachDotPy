@@ -1,7 +1,17 @@
 from variable import *
 
 class Visual_List(object):
+    color_red = 0
+    color_blue = 0
+    color_green = 255
+    
     def __init__(self, name, data, x, y, color=color(255,255,255), size=40, gap=5):
+        self.color_red = Visual_List.color_red
+        self.color_green = Visual_List.color_green
+        self.color_blue = Visual_List.color_blue
+        Visual_List.color_red += 100
+        Visual_List.color_blue += 100
+        Visual_List.color_green -= 100
         self.name = name
         self.data = data
         self.block_width = size
@@ -12,11 +22,13 @@ class Visual_List(object):
         self.gap = gap
     
     def draw(self):
+        stroke(self.color_red,self.color_green, self.color_blue)
         for i, item in enumerate(self.data):
             var_name = ''
             if i == len(self.data) - 1:
                 var_name = self.name
             Variable(var_name, item, self.x, self.y + (self.size + self.gap) * i).draw()
+        stroke(0)
             
     def __eq__(self, other):
         '''
