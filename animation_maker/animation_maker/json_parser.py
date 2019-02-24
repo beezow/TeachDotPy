@@ -24,10 +24,15 @@ def list_of_objects(file_name):
             elif p["type"] == "<class 'queue.Queue'>-get":
                 copied_queue = copy.deepcopy(get_item(objects, p["name"]))
                 copied_queue.get()
+                copied_queue.y += copied_queue.block_width + copied_queue.gap * 2 + 1
+                copied_queue.update_var_collection()
+                print(copied_queue.y)
+                print("Queue get")
                 objects.append(copied_queue)
 
             if p["type"] == "<class 'list'>":
-                if isinstance(p["data"][0], list):
+                print(p["data"])
+                if len(p["data"]) != 0 and isinstance(p["data"][0], list):
                     # 2d array
                     new_2d_list = Two_Dimensional_List(p["name"], p["data"], y=top_margin, size = width / 12)
                     objects.append(new_2d_list)
