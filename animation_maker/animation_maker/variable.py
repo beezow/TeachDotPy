@@ -1,4 +1,6 @@
 class Variable(object):
+    
+    
     def __init__(self, name, data, x=0, y=0, color=color(255,255,255), size=40, textsize=18, spacing=4):
         # var name
         self.name = name
@@ -18,6 +20,9 @@ class Variable(object):
         self.spacing = spacing
 
     def draw(self):
+        myFont = createFont("Monospaced.bold", width / 15)
+        textFont(myFont, width / 15)
+        textSize(width / 15)
         fill(self.color)
         # Creates rect with rounded corners
         if textWidth(str(self.data)) > self.size:
