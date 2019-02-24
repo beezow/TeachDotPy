@@ -1,6 +1,6 @@
 array= [1,2,3,4,5]
-answer = []
+shifted = []
 
 for i in range(len(array)):
-    answer.append(arr[(i + 1) % len(arr)])
-    print(answer[i])
+    shifted.append(array[(i + 1) % len(array)])
+    print(shifted[i])

@@ -1,3 +1,780 @@
 {
-    "steps": []
+    "steps": [
+        {
+            "name": "arr",
+            "type": "<class 'list'>",
+            "data": [
+                [
+                    "a",
+                    "b",
+                    "c",
+                    "d",
+                    "e"
+                ],
+                [
+                    "f",
+                    "g",
+                    "h",
+                    "i",
+                    "j"
+                ],
+                [
+                    "k",
+                    "l",
+                    "m",
+                    "n",
+                    "o"
+                ],
+                [
+                    "p",
+                    "q",
+                    "r",
+                    "s",
+                    "t"
+                ],
+                [
+                    "u",
+                    "v",
+                    "w",
+                    "x",
+                    "y"
+                ]
+            ],
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [],
+            "index": null
+        },
+        {
+            "name": "left",
+            "type": "<class 'int'>",
+            "data": 0,
+            "index": null
+        },
+        {
+            "name": "right",
+            "type": "<class 'int'>",
+            "data": 5,
+            "index": null
+        },
+        {
+            "name": "up",
+            "type": "<class 'int'>",
+            "data": 0,
+            "index": null
+        },
+        {
+            "name": "down",
+            "type": "<class 'int'>",
+            "data": 5,
+            "index": null
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 0,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a"
+            ],
+            "index": 1
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 1,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b"
+            ],
+            "index": 2
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c"
+            ],
+            "index": 3
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 3,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d"
+            ],
+            "index": 4
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 4,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e"
+            ],
+            "index": 5
+        },
+        {
+            "name": "up",
+            "type": "<class 'int'>",
+            "data": 1,
+            "index": null
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 1,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j"
+            ],
+            "index": 6
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o"
+            ],
+            "index": 7
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 3,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t"
+            ],
+            "index": 8
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 4,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y"
+            ],
+            "index": 9
+        },
+        {
+            "name": "right",
+            "type": "<class 'int'>",
+            "data": 4,
+            "index": null
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 3,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y",
+                "x"
+            ],
+            "index": 10
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y",
+                "x",
+                "w"
+            ],
+            "index": 11
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 1,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y",
+                "x",
+                "w",
+                "v"
+            ],
+            "index": 12
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 0,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y",
+                "x",
+                "w",
+                "v",
+                "u"
+            ],
+            "index": 13
+        },
+        {
+            "name": "down",
+            "type": "<class 'int'>",
+            "data": 4,
+            "index": null
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 3,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y",
+                "x",
+                "w",
+                "v",
+                "u",
+                "p"
+            ],
+            "index": 14
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y",
+                "x",
+                "w",
+                "v",
+                "u",
+                "p",
+                "k"
+            ],
+            "index": 15
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 1,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y",
+                "x",
+                "w",
+                "v",
+                "u",
+                "p",
+                "k",
+                "f"
+            ],
+            "index": 16
+        },
+        {
+            "name": "left",
+            "type": "<class 'int'>",
+            "data": 1,
+            "index": null
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 1,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y",
+                "x",
+                "w",
+                "v",
+                "u",
+                "p",
+                "k",
+                "f",
+                "g"
+            ],
+            "index": 17
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y",
+                "x",
+                "w",
+                "v",
+                "u",
+                "p",
+                "k",
+                "f",
+                "g",
+                "h"
+            ],
+            "index": 18
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 3,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y",
+                "x",
+                "w",
+                "v",
+                "u",
+                "p",
+                "k",
+                "f",
+                "g",
+                "h",
+                "i"
+            ],
+            "index": 19
+        },
+        {
+            "name": "up",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": null
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y",
+                "x",
+                "w",
+                "v",
+                "u",
+                "p",
+                "k",
+                "f",
+                "g",
+                "h",
+                "i",
+                "n"
+            ],
+            "index": 20
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 3,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y",
+                "x",
+                "w",
+                "v",
+                "u",
+                "p",
+                "k",
+                "f",
+                "g",
+                "h",
+                "i",
+                "n",
+                "s"
+            ],
+            "index": 21
+        },
+        {
+            "name": "right",
+            "type": "<class 'int'>",
+            "data": 3,
+            "index": null
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y",
+                "x",
+                "w",
+                "v",
+                "u",
+                "p",
+                "k",
+                "f",
+                "g",
+                "h",
+                "i",
+                "n",
+                "s",
+                "r"
+            ],
+            "index": 22
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 1,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y",
+                "x",
+                "w",
+                "v",
+                "u",
+                "p",
+                "k",
+                "f",
+                "g",
+                "h",
+                "i",
+                "n",
+                "s",
+                "r",
+                "q"
+            ],
+            "index": 23
+        },
+        {
+            "name": "down",
+            "type": "<class 'int'>",
+            "data": 3,
+            "index": null
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y",
+                "x",
+                "w",
+                "v",
+                "u",
+                "p",
+                "k",
+                "f",
+                "g",
+                "h",
+                "i",
+                "n",
+                "s",
+                "r",
+                "q",
+                "l"
+            ],
+            "index": 24
+        },
+        {
+            "name": "left",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": null
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": null
+        },
+        {
+            "name": "path",
+            "type": "<class 'list'>",
+            "data": [
+                "a",
+                "b",
+                "c",
+                "d",
+                "e",
+                "j",
+                "o",
+                "t",
+                "y",
+                "x",
+                "w",
+                "v",
+                "u",
+                "p",
+                "k",
+                "f",
+                "g",
+                "h",
+                "i",
+                "n",
+                "s",
+                "r",
+                "q",
+                "l",
+                "m"
+            ],
+            "index": 25
+        },
+        {
+            "name": "up",
+            "type": "<class 'int'>",
+            "data": 3,
+            "index": null
+        }
+    ]
 }
