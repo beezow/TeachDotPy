@@ -1,0 +1,28 @@
+{
+    "steps": [
+        {
+            "name": "q",
+            "type": "<class 'queue.Queue'>",
+            "data": [],
+            "index": []
+        },
+        {
+            "name": "q",
+            "type": "<class 'queue.Queue'>-put",
+            "data": 2,
+            "index": []
+        },
+        {
+            "name": "q",
+            "type": "<class 'queue.Queue'>-put",
+            "data": 3,
+            "index": []
+        },
+        {
+            "name": "q",
+            "type": "<class 'queue.Queue'>-put",
+            "data": 7,
+            "index": []
+        }
+    ]
+}

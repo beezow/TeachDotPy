@@ -1,6 +1,6 @@
 import json
 import re
-
+import queue
 class Logger(object):
     '''
     Records states of various objects and exports that to a json file
@@ -11,7 +11,7 @@ class Logger(object):
         self.logbook['steps'] = []
 
 
-    def log(self, name, type, data):
+    def log(self, name, typ, data):
         '''
         Takes in a turn and adds that to the currentTurn list.
         @param name: the variable name to log state as.
@@ -20,11 +20,14 @@ class Logger(object):
         '''
         state = {}
         state['name'] = name
-        state['type'] = type
+        state['type'] = typ
         try:
             state['data'] = data.copy()
         except:
-            state['data'] = data
+            if type(data) == type(queue.Queue()):
+                state['data'] = list(data.queue)
+            else:
+                state['data'] = data
 
         state['index'] = self.list_index(name)
 
@@ -50,8 +53,8 @@ class Logger(object):
         return indices
 
 
-    def __str__(self):
-        return str(self.logbook)
+    #def __str__(self):
+     #   return str(self.logbook)
 
 
 def test_logger(output_file):

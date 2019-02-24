@@ -24,6 +24,9 @@ def translate(line):
     if re.compile('\.put').search(line):
         return modify_queueput(line)
     
+    if re.compile('\.get').search(line):
+        return modify_queueget(line)
+
     return [line]
     #Other stuff
 
@@ -31,10 +34,20 @@ def modify_queueput(line):
     vars = line.split('.')
     queue_name = vars[0]
     put_value = vars[1].split("(")[1].split(")")[0]
-    print(put_value)
+    #print(put_value)
     log_line = "self.logger.log(\"" + queue_name + "\", " \
             + "str(type(" + queue_name + ")) + \"-put\", " + put_value + ")"
-    print(log_line)
+    #print(log_line)
+    return [log_line]
+
+def modify_queueput(line):
+    vars = line.split('.')
+    queue_name = vars[0]
+    put_value = vars[1].split("(")[1].split(")")[0]
+    #print(put_value)
+    log_line = "self.logger.log(\"" + queue_name + "\", " \
+            + "str(type(" + queue_name + ")) + \"-get\", " + put_value + ")"
+    #print(log_line)
     return [log_line]
 
 def remove_plus_eq(line):
