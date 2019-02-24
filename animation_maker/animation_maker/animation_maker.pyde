@@ -21,35 +21,18 @@ def setup():
     textFont(myFont, width / 15)
     textSize(width / 15)
 
+    # Accumulates each object to be taken a copy of to the frame object
     object_tracker = []
     
-    another_list = list_of_objects("../../test/spiral_matrix.json")
-
-    #another_list = list_of_objects("log/queue.json")
-    for p in another_list:
-        if p in object_tracker:
-            replaceIndex = object_tracker.index(p)
-            object_tracker[replaceIndex] = p
+    graphic_objects = list_of_objects("../../test/spiral_matrix.json")
+    #graphic_objects = list_of_objects("log/teach.json")
+    for graphic in graphic_objects:
+        if graphic in object_tracker:
+            replaceIndex = object_tracker.index(graphic)
+            object_tracker[replaceIndex] = graphic
         else:
-            object_tracker.append(p)
+            object_tracker.append(graphic)
         slides.append(Frame(copy.deepcopy(object_tracker)))
-        
-    # var = Variable('i', '1', 255, 255)
-    # object_tracker.append(var)
-    # newFrame = Frame(copy.deepcopy(object_tracker))
-    # slides.append(newFrame)
-        
-    # var2 = Variable('j', '2', 360, 360)
-    # object_tracker.append(var2)
-    # slides.append(Frame(copy.deepcopy(object_tracker)))
-    
-    # vis_list = Visual_List('list', [1,2,3,4], 30, 30)
-    # object_tracker.append(vis_list)
-    # slides.append(Frame(copy.deepcopy(object_tracker)))
-    
-    # two_d = Two_Dimensional_List('2Dlist', [[1,2,3,4,5],[3,4],[5,6]], 30, 30)
-    # object_tracker.append(two_d)
-    # slides.append(Frame(copy.deepcopy(object_tracker)))
     
 def draw():
     background(255)

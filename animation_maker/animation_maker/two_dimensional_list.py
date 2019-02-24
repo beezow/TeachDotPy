@@ -45,6 +45,7 @@ class Two_Dimensional_List(object):
                 self.var_collection[index].x = self.x + (3 * width / 32) * i
                 index += 1
                 #self.var_collection[index].y = self.y + (3 * width / 32) * j,
+                
     def update_list(self, new_data):
         self.data = new_data
         

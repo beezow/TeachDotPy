@@ -26,8 +26,6 @@ def list_of_objects(file_name):
                 copied_queue.get()
                 copied_queue.y += copied_queue.block_width + copied_queue.gap * 2 + 1
                 copied_queue.update_var_collection()
-                print(copied_queue.y)
-                print("Queue get")
                 objects.append(copied_queue)
 
             if p["type"] == "<class 'list'>":
@@ -35,7 +33,6 @@ def list_of_objects(file_name):
                     # 2d array
                     new_2d_list = Two_Dimensional_List(p["name"], p["data"], y=top_margin, size = width / 12)
                     objects.append(new_2d_list)
-                    #print("it's a list")
                 else:
                     # 1d array
                     new_list = Visual_List(p["name"], p["data"], 0, top_margin, size = width / 12)
@@ -63,6 +60,7 @@ def list_of_objects(file_name):
                 else:
                     objects.append(Variable(p["name"], p["data"], 100, top_margin, size = width / 12))
             if p["type"] == "<class 'list'>-acc":
+                # Access variables, for instance, list.append(arr[i][j])
                 to_modify = get_item(objects, p["name"])
                 if len(p["index"]) == 2:
                     index = p["index"]
@@ -71,8 +69,6 @@ def list_of_objects(file_name):
                     two_list = Two_Dimensional_List(p["name"], copy_data, y = top_margin)
                     
                     two_list.highlight_coord(index[1], index[0])
-                    #two_list.var_collection[0].color = color(0, 0, 255)
-                    #two_list.var_collection[y * len_x + x] = highlight(two_list.var_collection[y * len_x + x])
                     objects.append(two_list)
             if p["type"] == "<class 'string'>":
                 objects.append(Variable(p["name"], p["data"], 100, 100))

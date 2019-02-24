@@ -60,8 +60,6 @@ class Visual_List(object):
             if (self.y + (3 * width / 32) * (i + 1) >= height):
                 i = 0
                 j += 1
-            print(self.x + (3 * width / 32) * j)
-            print(j)
             var = Variable(var_name, item, self.x + (3 * width / 32) * j, self.y + (3 * width / 32) * i, size = width / 12)
             i += 1
             self.var_collection.append(var)
