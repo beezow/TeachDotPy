@@ -1,6 +1,6 @@
-from queue import *
+import queue
 
-q = Queue(maxsize = 0)
+q = queue.Queue()
 
 q.put(2)
 q.put(3)

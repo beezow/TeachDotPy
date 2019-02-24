@@ -16,7 +16,7 @@ class File:
         '''
         runs translated file
         '''
- #        print(self.translated)
+        print(self.translated)
         exec(self.translated)
         self.logger.to_json(self.outname)
 

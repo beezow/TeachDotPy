@@ -15,7 +15,7 @@ def setup():
 
     object_tracker = []
     
-    another_list = list_of_objects("/home/drew/projects/teach/TeachDotPy/log/teach.json")
+    another_list = list_of_objects("/home/bee/projects/teach/TeachDotPy/log/teach.json")
     for p in another_list:
         if p in object_tracker:
             replaceIndex = object_tracker.index(p)

@@ -41,7 +41,7 @@ def modify_queueput(line):
     log_line = "self.logger.log(\"" + queue_name + "\", " \
             + "str(type(" + queue_name + ")) + \"-put\", " + put_value + ")"
     #print(log_line)
-    return [log_line]
+    return [line, log_line]
 
 def modify_listammend(line):
     vars = line.split('.')
@@ -51,7 +51,7 @@ def modify_listammend(line):
     log_line = "self.logger.log(\"" + list_name + "\", " \
             + "str(type(" + list_name + ")), " + list_name + ")"
     #print(log_line)
-    return [log_line]
+    return [line, log_line]
 
 def modify_queueget(line):
     vars = line.split('.')
@@ -59,7 +59,7 @@ def modify_queueget(line):
     log_line = "self.logger.log(\"" + queue_name + "\", " \
             + "str(type(" + queue_name + ")) + \"-get\", None)"
     #print(log_line)
-    return [log_line]
+    return [line, log_line]
 
 def remove_plus_eq(line):
     vars = re.split("[+\-*/]=", line)
