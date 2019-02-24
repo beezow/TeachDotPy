@@ -1,6 +1,7 @@
 from variable import *
+from visual_list import *
 
-class Visual_List(object):
+class Two_Dimensional_List(object):
     def __init__(self, name, data, x, y, color = color(255, 255, 255), size = 40, gap = 5):
         self.name = name
         self.data = data
@@ -11,11 +12,9 @@ class Visual_List(object):
         self.gap = gap
     
     def draw(self):
-        for i, item in enumerate(self.data):
-            var_name = ''
-            if i == len(self. data) - 1:
-                var_name = self.name 
-            Variable(var_name, item, self.x, self.y + (self.size + self.gap) * i).draw()
+        for i in range(self.data):
+            Visual_List('list', self.data[i], self.x, self.ys).draw()
+            translate(i * 20, 0)
     
     def update_list(self, new_data):
         self.data = new_data

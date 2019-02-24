@@ -23,10 +23,19 @@ class Variable(object):
 
     def update_data(self, data):
         self.data = data
+        
+    '''
+    highlights an object
+    '''
     
     def re_highlight(self):
         self.highlight = True
         self.tint = color(0, 0, 255)
+    
+    '''
+    Changes a highlighted block back to default
+    '''
+
     def de_highlight(self):
         self.tint = color(255, 255, 255)
 
