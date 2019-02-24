@@ -1,0 +1,189 @@
+{
+    "steps": [
+        {
+            "name": "a",
+            "type": "<class 'list'>",
+            "data": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "index": []
+        },
+        {
+            "name": "veryveryverylongvariablename",
+            "type": "<class 'int'>",
+            "data": 0,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 1,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 3,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 3,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 4,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 4,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 5,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 0,
+            "index": []
+        },
+        {
+            "name": "veryveryverylongvariablename",
+            "type": "<class 'int'>",
+            "data": 0,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 1,
+            "index": []
+        },
+        {
+            "name": "veryveryverylongvariablename",
+            "type": "<class 'int'>",
+            "data": 1,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 2,
+            "index": []
+        },
+        {
+            "name": "veryveryverylongvariablename",
+            "type": "<class 'int'>",
+            "data": 3,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 3,
+            "index": []
+        },
+        {
+            "name": "veryveryverylongvariablename",
+            "type": "<class 'int'>",
+            "data": 6,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 4,
+            "index": []
+        },
+        {
+            "name": "veryveryverylongvariablename",
+            "type": "<class 'int'>",
+            "data": 10,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 5,
+            "index": []
+        },
+        {
+            "name": "veryveryverylongvariablename",
+            "type": "<class 'int'>",
+            "data": 15,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 6,
+            "index": []
+        },
+        {
+            "name": "veryveryverylongvariablename",
+            "type": "<class 'int'>",
+            "data": 21,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 7,
+            "index": []
+        },
+        {
+            "name": "veryveryverylongvariablename",
+            "type": "<class 'int'>",
+            "data": 28,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 8,
+            "index": []
+        },
+        {
+            "name": "veryveryverylongvariablename",
+            "type": "<class 'int'>",
+            "data": 36,
+            "index": []
+        },
+        {
+            "name": "i",
+            "type": "<class 'int'>",
+            "data": 9,
+            "index": []
+        },
+        {
+            "name": "veryveryverylongvariablename",
+            "type": "<class 'int'>",
+            "data": 45,
+            "index": []
+        }
+    ]
+}
