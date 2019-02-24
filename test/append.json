@@ -4,7 +4,7 @@
             "name": "a",
             "type": "<class 'list'>",
             "data": [],
-            "index": []
+            "index": null
         },
         {
             "name": "a",
@@ -12,7 +12,7 @@
             "data": [
                 1
             ],
-            "index": []
+            "index": 1
         },
         {
             "name": "a",
@@ -21,7 +21,7 @@
                 1,
                 2
             ],
-            "index": []
+            "index": 2
         },
         {
             "name": "a",
@@ -31,7 +31,7 @@
                 2,
                 3
             ],
-            "index": []
+            "index": 3
         },
         {
             "name": "a",
@@ -42,7 +42,7 @@
                 3,
                 4
             ],
-            "index": []
+            "index": 4
         }
     ]
 }
