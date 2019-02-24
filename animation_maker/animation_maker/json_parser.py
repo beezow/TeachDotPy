@@ -41,7 +41,7 @@ def list_of_objects(file_name):
             if p["type"] == "<class 'list'>":
                 objects.append(Visual_List(p["name"], p["data"], 0, 0))
             if p["type"] == "<class 'int'>":
-                objects.append(Variable(p["name"], p["data"], 100, 100))
+                objects.append(Variable(p["name"], p["data"], 100, 45 * p["data"]))
             if p["type"] == "<class 'string'>":
                 objects.append(Variable(p["name"], p["data"], 100, 100))
         return objects
