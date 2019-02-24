@@ -60,9 +60,13 @@ def draw():
     
 def keyReleased():
     global slide_number
+    if (key == "q"):
+        exit()
     if (key == CODED):
         if keyCode == RIGHT and (slide_number + 1 < len(slides)):
             slide_number += 1
 
         if keyCode == LEFT and (slide_number - 1 >= 0):
             slide_number -= 1
+
+            
