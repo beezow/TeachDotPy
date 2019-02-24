@@ -33,7 +33,7 @@ class Variable(object):
         textSize(self.textsize)
         
         #Creates variable label text
-        text(self.name, self.x, self.y + self.size + self.textsize)
+        text(self.name, self.x + self.size / 2 - textWidth(self.name) / 2, self.y + self.size + self.textsize)
         
     def set_coords(self, x, y):
         self.x = x

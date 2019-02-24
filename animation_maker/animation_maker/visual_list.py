@@ -27,7 +27,7 @@ class Visual_List(object):
             var_name = ''
             if i == len(self.data) - 1:
                 var_name = self.name
-            Variable(var_name, item, self.x, self.y + (self.size + self.gap) * i).draw()
+            Variable(var_name, item, self.x, self.y + (3 * width / 32) * i).draw()
         stroke(0)
             
     def __eq__(self, other):
