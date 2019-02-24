@@ -1,21 +1,38 @@
 class Variable(object):
-    def __init__(self, name, data, x, y, color=color(255,255,255), size=40):
+    def __init__(self, name, data, x, y, color=color(255,255,255), size=40, textsize=18, spacing=4):
+        # var name
         self.name = name
+        # data assigned
         self.data = data
+        # coordinates
         self.x = x
         self.y = y
+        # color of the background cell
         self.color = color
+        # standard square size of the cell
         self.size = size
+        self.block_width = size
+        self.block_height = size
+        self.textsize = textsize
+        # minimum spacing between text and border of cell
+        self.spacing = spacing
 
     def draw(self):
-        TEXTSIZE = 18
         fill(self.color)
-        rect(self.x, self.y, self.size, self.size, self.size / 5)
+        # Creates rect with rounded corners
+        if textWidth(str(self.data)) > self.size:
+            self.block_width = textWidth(str(self.data))
+        else:
+            self.block_width = self.size
+        rect(self.x, self.y, self.block_width, self.block_height, self.size / 5)
         fill(0)
-        text(str(self.data), self.x + TEXTSIZE, self.y + TEXTSIZE)
-        textSize(TEXTSIZE)
+        # Creates data text
+        text_x_coord = self.x + (self.block_width - textWidth(str(self.data))) / 2
+        text(str(self.data), text_x_coord, self.y + self.textsize)
+        textSize(self.textsize)
         
-        text(self.name, self.x, self.y + self.size + TEXTSIZE)
+        #Creates variable label text
+        text(self.name, self.x, self.y + self.size + self.textsize)
         
     def set_coords(self, x, y):
         self.x = x
