@@ -62,7 +62,7 @@ def list_of_objects(file_name):
 
                     objects.append(vis_list)
                 else:
-                    objects.append(Variable(p["name"], p["data"], 100, top_margin + (3 * width / 32) * p["data"], size = width / 12))
+                    objects.append(Variable(p["name"], p["data"], 100, top_margin, size = width / 12))
             if p["type"] == "<class 'string'>":
                 objects.append(Variable(p["name"], p["data"], 100, 100))
         return objects
