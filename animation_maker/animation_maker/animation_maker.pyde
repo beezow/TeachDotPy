@@ -15,10 +15,16 @@ slide_number = 0
 def setup():
     global var, slides, slide_number
     size(w, h)
+    
+    
+    myFont = createFont("Monospaced.bold", width / 15)
+    textFont(myFont, width / 15)
+    textSize(width / 15)
 
     object_tracker = []
     
-    another_list = list_of_objects("../../test/ld_array_modification.json")
+
+    another_list = list_of_objects("log/teach.json")
     for p in another_list:
         if p in object_tracker:
             replaceIndex = object_tracker.index(p)
