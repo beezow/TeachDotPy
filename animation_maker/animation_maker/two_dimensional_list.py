@@ -4,7 +4,14 @@ from highlighter import *
 
 class Two_Dimensional_List(object):
     
+    color_red = 0
+    color_blue = 0
+    color_green = 255
+    
     def __init__(self, name, data, x=0, y=0, color = color(255, 255, 255), size = 90, gap = 5):
+        self.color_red = Two_Dimensional_List.color_red
+        self.color_green = Two_Dimensional_List.color_green
+        self.color_blue = Two_Dimensional_List.color_blue
         self.name = name
         self.data = data
         self.x = x
@@ -20,10 +27,11 @@ class Two_Dimensional_List(object):
         myFont = createFont("Monospaced.bold", width / 15)
         textFont(myFont, width / 15)
         textSize(width / 15)
-
+        stroke(self.color_red, self.color_green, self.color_blue)
         for var in self.var_collection:
             var.draw()
             #print(red(var.color), green(var.color), blue(var.color))
+        stroke(0)
 
     def __eq__(self, other):
         '''
