@@ -1,6 +1,6 @@
-a = []
-a.append(1)
-a.append(2)
-a.append(3)
-a.append(4)
+array = []
+array.append(1)
+array.append(2)
+array.append(3)
+array.append(4)
 
