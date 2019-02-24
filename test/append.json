@@ -1,0 +1,48 @@
+{
+    "steps": [
+        {
+            "name": "a",
+            "type": "<class 'list'>",
+            "data": [],
+            "index": []
+        },
+        {
+            "name": "a",
+            "type": "<class 'list'>",
+            "data": [
+                1
+            ],
+            "index": []
+        },
+        {
+            "name": "a",
+            "type": "<class 'list'>",
+            "data": [
+                1,
+                2
+            ],
+            "index": []
+        },
+        {
+            "name": "a",
+            "type": "<class 'list'>",
+            "data": [
+                1,
+                2,
+                3
+            ],
+            "index": []
+        },
+        {
+            "name": "a",
+            "type": "<class 'list'>",
+            "data": [
+                1,
+                2,
+                3,
+                4
+            ],
+            "index": []
+        }
+    ]
+}
