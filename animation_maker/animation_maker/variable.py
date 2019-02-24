@@ -32,7 +32,7 @@ class Variable(object):
         fill(0)
         # Creates data text
         text_x_coord = self.x + (self.block_width - textWidth(str(self.data))) / 2
-        text_y_coord = self.y + self.block_height - self.textsize / 2
+        text_y_coord = self.y + self.block_height - self.textsize
         text(str(self.data), text_x_coord, text_y_coord)
         textSize(self.textsize)
         
