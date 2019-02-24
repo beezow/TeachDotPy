@@ -7,7 +7,7 @@ from json_parser import *
 from two_dimensional_list import *
 
 w = 1080
-h = w * 2 / 3
+h = int(w * 2 / 2.8)
 
 var = None
 slides = []
