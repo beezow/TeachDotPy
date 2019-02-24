@@ -3,8 +3,6 @@ from visual_list import *
 
 class Two_Dimensional_List(object):
     
-    
-    
     def __init__(self, name, data, x, y, color = color(255, 255, 255), size = 40, gap = 5):
         self.name = name
         self.data = data
